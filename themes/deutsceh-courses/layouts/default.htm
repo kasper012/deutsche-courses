@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+    <!--================= Meta tag =================-->
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <meta name="description" content="">
+    <!--================= Responsive Tag =================-->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--================= Favicon =================-->
+    <link rel="apple-touch-icon" href="{{'assets/images/fav.png'| theme }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{'assets/images/fav.png'| theme }}">        
+    <!--================= Bootstrap v5 Css =================-->
+    <link rel="stylesheet" type="text/css" href="{{'css/bootstrap.min.css'| theme }}">
+    <!--================= Back Menus Css =================-->
+    <link rel="stylesheet" type="text/css" href="{{'assets/css/back-menus.css'| theme }}">               
+    <!--================= Animate Css =================-->
+    <link rel="stylesheet" type="text/css" href="{{'assets/css/animate.css'| theme}}">
+    <!--================= Owl Carousel Css =================-->
+    <link rel="stylesheet" type="text/css" href="{{'assets/css/owl.carousel.css'| theme}}">        
+    <!--================= Elegant icon Css  =================-->
+    <link rel="stylesheet" type="text/css" href="{{'assets/fonts/elegant-icon.css'| theme}}">
+    <!--================= Magnific Popup Css =================-->
+    <link rel="stylesheet" type="text/css" href="{{'assets/css/magnific-popup.css'| theme}}">
+    <!--================= Back Animations Css =================-->
+    <link rel="stylesheet" type="text/css" href="{{'assets/css/back-animations.css'| theme}}"> 
+    <!--================= Style Css =================-->
+    <link rel="stylesheet" type="text/css" href="{{'assets/css/style.css'| theme}}">
+    <!--================= Spacing Css =================-->
+    <link rel="stylesheet" type="text/css" href="{{'assets/css/back-spacing.css'| theme}}">
+    <!--================= Responsive Css =================-->
+    <link rel="stylesheet" type="text/css" href="{{'assets/css/responsive.css'| theme}}">
+</head>
+<!--Body start-->
+<body>
+    {% partial 'header'%}
+    {% page %}
+    {% partial 'footer'%}
+
+    {% framework extras %}
+</body>
