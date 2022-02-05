@@ -2,7 +2,7 @@ url = "/"
 layout = "default" 
 title = "Home" 
 ==
-{{ sliders.slider }}
+
 <div class="back-wrapper">
     <div class="back-wrapper-inner language-school-page">
         <!--================= Slider Section Start =================-->
@@ -13,13 +13,13 @@ title = "Home"
 
                 <div class="owl-stage-outer">
 
-                    <div class="owl-stage" style="transform: translate3d(-2564px, 0px, 0px); transition: all 0s ease 0s; width: 7692px;">
+                    <div class="owl-stage" >
                         {% for slide in sliders.slider %}
-                        <div class="owl-item cloned" style="width: 1282px;">
+                        <div class="owl-item" style="width: 1282px;">
                             <div class="single-slide">
                                 <div class="slider-img">
-                                    <img class="desktop" src="{{ slide.image }}" alt="Slider Image 1">
-                                    <img class="mobile" src="{{ slide.mobile_img }}" alt="Slider Image 1">
+                                    <img class="desktop" src="{{ slide.image| media }}" alt="Slider Image 1">
+                                    <img class="mobile" src="{{ slide.mobile_img| media }}" alt="Slider Image 1">
                                 </div>
                                 <div class="container">
                                     <div class="slider-content">
@@ -32,7 +32,7 @@ title = "Home"
                                                 {{ slide.subtitle }}
                                             </p>
                                             <div class="slider-btn">
-                                                <a href="{{ slide.btn_url}}" class="back-btn-border">{{ slide.btn_txt }}</a>
+                                                <a href="{{ slide.btn_url }}" class="back-btn-border">{{ slide.btn_txt }}</a>
                                             </div>
                                         </div>
                                     </div>
@@ -40,102 +40,6 @@ title = "Home"
                             </div>
                         </div>
                         {% endfor %}
-                        <!-- <div class="owl-item active" style="width: 1282px;">
-                            <div class="single-slide">
-                                <div class="slider-img">
-                                    <img class="desktop" src="{{'assets/images/language/1.jpg'| theme }}" alt="Slider Image 1">
-                                    <img class="mobile" src="{{'assets/images/language/11.jpg'| theme }}" alt="Slider Image 1">
-                                </div>
-                                <div class="container">
-                                    <div class="slider-content">
-                                        <div class="content-part">
-                                            <span class="slider-pretitle">Welcome to Dlear</span>
-                                            <h2 class="slider-title">
-                                                Find the right <br>Online Tutor for you.
-                                            </h2>
-                                            <p class="slider-desc">
-                                                The right mentoring relationship can be a powerful professional <br>growth. Bark up the right tree.
-                                            </p>
-                                            <div class="slider-btn">
-                                                <a href="about.html" class="back-btn-border">Visit Campus</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="owl-item" style="width: 1282px;">
-                            <div class="single-slide">
-                                <div class="slider-img">
-                                    <img class="desktop" src="{{'assets/images/slider/2.jpg'| theme }}" alt="Slider Image 3">
-                                    <img class="mobile" src="{{'assets/images/slider/22.jpg'| theme }}" alt="Slider Image 3">
-                                </div>
-                                <div class="container">
-                                    <div class="slider-content">
-                                        <div class="content-part">
-                                            <span class="slider-pretitle">Welcome to Dlear</span>
-                                            <h2 class="slider-title">
-                                                Find the right <br>Online Tutor for you.
-                                            </h2>
-                                            <p class="slider-desc">
-                                                The right mentoring relationship can be a powerful professional <br>growth. Bark up the right tree.
-                                            </p>
-                                            <div class="slider-btn">
-                                                <a href="about.html" class="back-btn-border">Visit Campus</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="owl-item cloned" style="width: 1282px;">
-                            <div class="single-slide">
-                                <div class="slider-img">
-                                    <img class="desktop" src="{{'assets/images/language/1.jpg'| theme }}" alt="Slider Image 1">
-                                    <img class="mobile" src="{{'assets/images/language/11.jpg'| theme }}" alt="Slider Image 1">
-                                </div>
-                                <div class="container">
-                                    <div class="slider-content">
-                                        <div class="content-part">
-                                            <span class="slider-pretitle">Welcome to Dlear</span>
-                                            <h2 class="slider-title">
-                                                Find the right <br>Online Tutor for you.
-                                            </h2>
-                                            <p class="slider-desc">
-                                                The right mentoring relationship can be a powerful professional <br>growth. Bark up the right tree.
-                                            </p>
-                                            <div class="slider-btn">
-                                                <a href="about.html" class="back-btn-border">Visit Campus</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="owl-item cloned" style="width: 1282px;">
-                            <div class="single-slide">
-                                <div class="slider-img">
-                                    <img class="desktop" src="{{'assets/images/slider/2.jpg'| theme }}" alt="Slider Image 3">
-                                    <img class="mobile" src="{{'assets/images/slider/22.jpg'| theme }}" alt="Slider Image 3">
-                                </div>
-                                <div class="container">
-                                    <div class="slider-content">
-                                        <div class="content-part">
-                                            <span class="slider-pretitle">Welcome to Dlear</span>
-                                            <h2 class="slider-title">
-                                                Find the right <br>Online Tutor for you.
-                                            </h2>
-                                            <p class="slider-desc">
-                                                The right mentoring relationship can be a powerful professional <br>growth. Bark up the right tree.
-                                            </p>
-                                            <div class="slider-btn">
-                                                <a href="about.html" class="back-btn-border">Visit Campus</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
                 <div class="owl-nav"><button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button><button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button></div>
@@ -174,39 +78,11 @@ title = "Home"
                 </div>
             </div>
         </div>
+
         <!--================= About Section End Here ================= -->
 
         <!--================= Brand Section Start Here =================-->
-        <div class="brand__area back-logo-area">
-            <div class="container brand__width">
-                <div class="row">
-                    <div class="col-xxl-12">
-                        <div class="brand__content text-center">
-                            <img src="{{'assets/images/logo-carousel/icon/01.png'| theme }}" alt="">
-                            <h3 class="brand__title">Trusted by Teams at</h3>
-                            <img src="{{'assets/images/logo-carousel/icon/02.png'| theme }}" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="brand__slider">
-                    <div class="brand__item">
-                        <img src="{{'assets/images/logo-carousel/01.png'| theme }}" alt="Brand icon">
-                    </div>
-                    <div class="brand__item">
-                        <img src="{{'assets/images/logo-carousel/02.png'| theme }}" alt="Brand icon">
-                    </div>
-                    <div class="brand__item">
-                        <img src="{{'assets/images/logo-carousel/03.png'| theme }}" alt="Brand icon">
-                    </div>
-                    <div class="brand__item">
-                        <img src="{{'assets/images/logo-carousel/04.png'| theme }}" alt="Brand icon">
-                    </div>
-                    <div class="brand__item">
-                        <img src="{{'assets/images/logo-carousel/05.png'| theme }}" alt="Brand icon">
-                    </div>
-                </div>
-            </div>
-        </div>
+        {% partial 'brands'%}
         <!--================= Brand Section End Here =================-->
 
         <!--================= Course Filter Section Start Here =================-->
