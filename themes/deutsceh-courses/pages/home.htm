@@ -209,13 +209,13 @@ title = "Home"
                             <div class="event__card-wrapper">
                                 <div class="event__card">
                                     <div class="event__card--date-area">
-                                        <span class="event__card--date-area-1">29</span>
-                                        <span class="event__card--date-area-2">Jun, 2022</span>
+                                        <span class="event__card--date-area-1">{{event.start_date |date('d')}}</span>
+                                        <span class="event__card--date-area-2">{{event.start_date |date('M, y')}}</span>
                                     </div>
                                     <div class="event__card--icon-area">
                                         <span class="event__card--icon-area-1"><i class="icon" data-feather="clock"></i>
-                                            11:50 am to
-                                            05:50 pm</span>
+                                            {{event.start_date| date('h:m')}} to
+                                            {{event.finish_date| date('h:m')}}</span>
                                         <span class="event__card--icon-area-2"><i class="icon" data-feather="map-pin"></i> {{event.city }}</span>
                                         <p class="event__card--icon-area-3">{{event.event_name }}</p>
                                     </div>
@@ -231,7 +231,7 @@ title = "Home"
                     </div>
                     <div class="col-lg-4">
                         <div class="event__video-btn text-end">
-                            <img class="m-img image-background" src="assets/images/event/bannner.jpg" alt="Video Image">
+                            <img class="m-img image-background" src="{{'assets/images/event/bannner.jpg'| theme}}" alt="Video Image">
                             <div class="event__video-btn--play">
                                 <a href="https://youtu.be/yJg-Y5byMMw" class="event__video-btn--play-btn popup-videos">
                                     <i class="arrow_triangle-right"></i>
