@@ -205,6 +205,7 @@ title = "Home"
                                 <h2 class="event__title">Join our <br> Upcoming Events</h2>
                                 <p class="event__paragraph">Learning is a life-long journey that in fact we never find the terminate stop. </p>
                             </div>
+                            {% for event in company.event %}
                             <div class="event__card-wrapper">
                                 <div class="event__card">
                                     <div class="event__card--date-area">
@@ -215,53 +216,15 @@ title = "Home"
                                         <span class="event__card--icon-area-1"><i class="icon" data-feather="clock"></i>
                                             11:50 am to
                                             05:50 pm</span>
-                                        <span class="event__card--icon-area-2"><i class="icon" data-feather="map-pin"></i> New
-                                            York</span>
-                                        <p class="event__card--icon-area-3">Global Conference for reducing.</p>
+                                        <span class="event__card--icon-area-2"><i class="icon" data-feather="map-pin"></i> {{event.city }}</span>
+                                        <p class="event__card--icon-area-3">{{event.event_name }}</p>
                                     </div>
                                     <div class="event__card--btn">
                                         <a href="about.html" class="w-btn w-btn-8">Tickets</a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="event__card-wrapper">
-                                <div class="event__card">
-                                    <div class="event__card--date-area">
-                                        <span class="event__card--date-area-1">12</span>
-                                        <span class="event__card--date-area-2">Aug, 2022</span>
-                                    </div>
-                                    <div class="event__card--icon-area">
-                                        <span class="event__card--icon-area-1"><i class="icon" data-feather="clock"></i>
-                                            9:30 am to
-                                            11:30 pm</span>
-                                        <span class="event__card--icon-area-2"><i class="icon" data-feather="map-pin"></i> New
-                                            York</span>
-                                        <p class="event__card--icon-area-3">Street Performance: Call for Art.</p>
-                                    </div>
-                                    <div class="event__card--btn">
-                                        <a href="about.html" class="w-btn w-btn-8">Tickets</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="event__card-wrapper">
-                                <div class="event__card">
-                                    <div class="event__card--date-area">
-                                        <span class="event__card--date-area-1">24</span>
-                                        <span class="event__card--date-area-2">May, 2022</span>
-                                    </div>
-                                    <div class="event__card--icon-area">
-                                        <span class="event__card--icon-area-1"><i class="icon" data-feather="clock"></i>
-                                            4:50 am to
-                                            07:50 pm</span>
-                                        <span class="event__card--icon-area-2"><i class="icon" data-feather="map-pin"></i> New
-                                            York</span>
-                                        <p class="event__card--icon-area-3">Global Conference for reducing.</p>
-                                    </div>
-                                    <div class="event__card--btn">
-                                        <a href="about.html" class="w-btn w-btn-8">Tickets</a>
-                                    </div>
-                                </div>
-                            </div>
+                                {% endfor %}
                             <p class="event__small-paragraph">Lorem ipsum dolor sit amet, consectetur adall.</p>
                             <a class="event__small-paragraph--link" href="languages-school.html#"> View all Event <i class="arrow_right event__small-paragraph--link-icon"></i></a>
                         </div>

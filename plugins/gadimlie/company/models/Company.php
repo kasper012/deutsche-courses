@@ -7,6 +7,9 @@ use Model;
  */
 class Company extends Model
 {
+    public $jsonable=[
+        'event'
+    ];
 
     public $implement = [
         'System.Behaviors.SettingsModel',

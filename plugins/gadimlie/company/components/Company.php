@@ -26,29 +26,18 @@ class Company extends ComponentBase
 
         $company->name = $settings->name;
         $company->address = $settings->address;
-        $company->why_work_with_us_subtitle = $settings->why_work_with_us_subtitle;
         $company->slogan = $settings->slogan;
         $company->logo = $settings->logo;
-        $company->document = $settings->document;
-        $company->excerpt = $settings->excerpt;
+        $company->light_logo = $settings->light_logo;
         $company->image = $settings->image;
-        $company->mission = $settings->mission;
-
-        $company->vision = $settings->vision;
-        $company->values = $settings->values;
-        $company->who_we_are_excerpt = $settings->who_we_are_excerpt;
-        $company->who_we_are = $settings->who_we_are;
-
-        $company->team = $settings->team;
-        $company->workHours = $settings->workHours;
-        $company->cv = $settings->cv;
-
-        
         $company->phone = $settings->phone;
         $company->email = $settings->email;
-
-        $company->gmaps = $settings->gmaps;
-        $company->socials = $settings->socials;
+        $company->event = $settings->event;
+        // $company->start_date = $settings->start_date;
+        // $company->finish_date = $settings->finish_date;
+        // $company->event_name = $settings->event_name;
+        // $company->city = $settings->city;
+        
 
 
 

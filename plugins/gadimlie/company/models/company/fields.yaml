@@ -25,7 +25,7 @@ fields:
 tabs:
     fields:
     #Info
-        tel:
+        phone:
             tab: Info
             label: Phone number
             span: storm
@@ -53,12 +53,14 @@ tabs:
                         label: Start date
                         span: storm
                         cssClass: col-md-6
+                        default: now
                     finish_date:
                         type: datepicker
                         label: Finish date
                         span: storm
                         cssClass: col-md-6
-                    name: 
+                        default: now 
+                    event_name: 
                         label: Events name
                     city: 
                         label: City
