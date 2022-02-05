@@ -1,0 +1,46 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+
+fields:
+    
+
+tabs:
+    fields:
+
+        slider:
+            type: repeater
+            prompt: New image
+            tab: Slider
+            form: 
+                fields: 
+                    title: 
+                        label: Title
+                        span: storm
+                    subtitle:
+                        label: Subtitle
+                        span: storm
+
+                    image: 
+                        label: İmage
+                        span: storm
+                        type: mediafinder
+                    mobile_img:
+                        label: Image for mobile
+                        span: storm
+                        type: mediafinder
+
+                    btn_txt:
+                        label: Button text
+                        span: auto
+                    btn_url: 
+                        label: Button link
+                        span: auto
+                    
+                    
+
+
+        
+        
+                

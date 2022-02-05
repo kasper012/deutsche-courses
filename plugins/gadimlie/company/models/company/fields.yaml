@@ -1,0 +1,124 @@
+
+fields:
+    
+    name:
+        label: Şirkətin adı
+        span: storm
+        cssClass: col-md-6
+        tab: Ümumi məlumat
+    address:
+        tab: Əlaqə
+        label: Ünvan
+        span: storm
+        cssClass: col-md-6
+    slogan:
+        label: Sloqan
+        span: storm
+        cssClass: col-md-6
+    logo:
+        label: Loqo
+        span: storm
+        cssClass: col-md-6
+        type: mediafinder
+        
+
+tabs:
+    fields:
+# Main Info
+        image:
+            tab: Ümumi məlumat
+            label: Haqqimizda shekil
+            type: mediafinder 
+            span: storm
+            cssClass: col-md-6
+           
+
+        document:
+            tab: Ümumi məlumat
+            label: Şirkətin təqdimatı
+            type: mediafinder
+        
+        cv:
+            tab: Haqqımızda
+            label: İş üçün müraciət anketi
+            type: mediafinder
+# Haqqımızda tab
+        mission:
+            tab: Haqqımızda 
+            type: richeditor
+            label: Missiyamız
+        vision:
+            tab: Haqqımızda
+            type: richeditor
+            label: Vizyonumuz
+        values:
+            tab: Haqqımızda
+            type: richeditor
+            label: Dəyərlərimiz
+        who_we_are_excerpt:
+            tab: Haqqımızda
+            type: richeditor
+            label: Əsas səhifədəki Biz kimik mətni
+        who_we_are:
+            tab: Haqqımızda
+            type: richeditor
+            label: Haqqımızda səhifəsində Biz kimik mətni
+        team:
+            tab: Komanda
+            type: repeater
+            prompt: Yeni komanda üzvü əlavə et
+            form:
+                fields:
+                    image:
+                        label: Komanda üzvün şəkili
+                        type: mediafinder
+                    name:
+                        label: Komanda üzvün adı və soyadı
+                    post:
+                        label: Komanda üzvün vəzifəsi
+                    phone:
+                        label: Komanda üzvün telefonu
+                    email:
+                        label: Komanda üzvün elektron ünvanı
+
+
+# Contacts 
+        workHours:
+            tab: Əlaqə
+            label: İş saatları
+            span: storm
+            cssClass: col-xs-12
+        phone:
+            tab: Əlaqə
+            label: Telefon nömrəsi
+            type: repeater
+            prompt: Telefon əlavə et
+            form: 
+                fields:
+                    phone:
+        email:
+            tab: Əlaqə
+            label: Elektron ünvan
+            type: repeater
+            prompt: Elektron ünvan əlavə et
+            form: 
+                fields:
+                    email:
+        gmaps:
+            tab: Əlaqə
+            type: textarea
+            label: Google xəritə linki
+            span: storm
+            cssClass: col-md-12
+        socials:
+            tab: Əlaqə
+            type: repeater
+            prompt: Sosial şəbəkə əlavə et
+            form:
+                fields:
+                    name:
+                        label: Sosial şəbəkənin adı    
+                    url:
+                        label: Sosial şəbəkənin linki
+    
+        

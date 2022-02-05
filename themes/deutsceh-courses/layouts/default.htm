@@ -1,41 +1,75 @@
 <!DOCTYPE html>
-<head>
-    <!--================= Meta tag =================-->
-    <meta charset="utf-8">
-    <title>{{ page.title }}</title>
-    <meta name="description" content="">
-    <!--================= Responsive Tag =================-->
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--================= Favicon =================-->
-    <link rel="apple-touch-icon" href="{{'assets/images/fav.png'| theme }}">
-    <link rel="shortcut icon" type="image/x-icon" href="{{'assets/images/fav.png'| theme }}">        
-    <!--================= Bootstrap v5 Css =================-->
-    <link rel="stylesheet" type="text/css" href="{{'css/bootstrap.min.css'| theme }}">
-    <!--================= Back Menus Css =================-->
-    <link rel="stylesheet" type="text/css" href="{{'assets/css/back-menus.css'| theme }}">               
-    <!--================= Animate Css =================-->
-    <link rel="stylesheet" type="text/css" href="{{'assets/css/animate.css'| theme}}">
-    <!--================= Owl Carousel Css =================-->
-    <link rel="stylesheet" type="text/css" href="{{'assets/css/owl.carousel.css'| theme}}">        
-    <!--================= Elegant icon Css  =================-->
-    <link rel="stylesheet" type="text/css" href="{{'assets/fonts/elegant-icon.css'| theme}}">
-    <!--================= Magnific Popup Css =================-->
-    <link rel="stylesheet" type="text/css" href="{{'assets/css/magnific-popup.css'| theme}}">
-    <!--================= Back Animations Css =================-->
-    <link rel="stylesheet" type="text/css" href="{{'assets/css/back-animations.css'| theme}}"> 
-    <!--================= Style Css =================-->
-    <link rel="stylesheet" type="text/css" href="{{'assets/css/style.css'| theme}}">
-    <!--================= Spacing Css =================-->
-    <link rel="stylesheet" type="text/css" href="{{'assets/css/back-spacing.css'| theme}}">
-    <!--================= Responsive Css =================-->
-    <link rel="stylesheet" type="text/css" href="{{'assets/css/responsive.css'| theme}}">
-</head>
-<!--Body start-->
-<body>
-    {% partial 'header'%}
-    {% page %}
-    {% partial 'footer'%}
+<html lang='en'>
+    <head>
+        <!--================= Meta tag =================-->
+        <meta charset="utf-8">
+        <title>{{ this.page.title }}</title>
+        <meta name="description" content="">
+        <!--================= Responsive Tag =================-->
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--================= Favicon =================-->
+        <link rel="apple-touch-icon" href="{{'assets/images/fav.png'| theme }}">
+        <link rel="shortcut icon" type="image/x-icon" href="{{'assets/images/fav.png'| theme }}">        
+        <!--================= Bootstrap v5 Css =================-->
+        <link rel="stylesheet" type="text/css" href="{{'assets/css/bootstrap.min.css'| theme }}">
+        <!--================= Back Menus Css =================-->
+        <link rel="stylesheet" type="text/css" href="{{'assets/css/back-menus.css'| theme }}">               
+        <!--================= Animate Css =================-->
+        <link rel="stylesheet" type="text/css" href="{{'assets/css/animate.css'| theme}}">
+        <!--================= Owl Carousel Css =================-->
+        <link rel="stylesheet" type="text/css" href="{{'assets/css/owl.carousel.css'| theme}}">        
+        <!--================= Elegant icon Css  =================-->
+        <link rel="stylesheet" type="text/css" href="{{'assets/fonts/elegant-icon.css'| theme}}">
+        <!--================= Magnific Popup Css =================-->
+        <link rel="stylesheet" type="text/css" href="{{'assets/css/magnific-popup.css'| theme}}">
+        <!--================= Back Animations Css =================-->
+        <link rel="stylesheet" type="text/css" href="{{'assets/css/back-animations.css'| theme}}"> 
+        <!--================= Style Css =================-->
+        <link rel="stylesheet" type="text/css" href="{{'assets/css/style.css'| theme}}">
+        <!--================= Spacing Css =================-->
+        <link rel="stylesheet" type="text/css" href="{{'assets/css/back-spacing.css'| theme}}">
+        <!--================= Responsive Css =================-->
+        <link rel="stylesheet" type="text/css" href="{{'assets/css/responsive.css'| theme}}">
+        {% styles %}
+    </head>
+    <!--Body start-->
+    <body>
+        {% partial 'header'%}
+        {% page %}
+        {% partial 'footer'%}
+        <!--================= Scroll Top Start Here =================-->
+        <div id="backscrollUp">
+            <span aria-hidden="true" class="arrow_carrot-up"></span>
+        </div> 
+        <!--================= Scroll Top End Here =================-->
 
-    {% framework extras %}
-</body>
+        <!--================= Jquery latest version =================-->
+        <script src="{{'assets/js/jquery.min.js'| theme }}"></script>
+        <!--================= Modernizr js =================-->
+        <script src="{{'assets/js/modernizr-2.8.3.min.js'| theme }}"></script>
+        <!--================= Bootstrap js =================-->
+        <script src="{{'assets/js/bootstrap.min.js'| theme }}"></script>
+        <!--================= Owl Carousel js =================-->
+        <script src="{{'assets/js/owl.carousel.min.js'| theme }}"></script>
+        <!--================= magnific popup =================-->
+        <script src="{{'assets/js/jquery.magnific-popup.min.js'| theme }}"></script>
+        <!--================= Counter Up js =================-->
+        <script src="{{'assets/js/jquery.counterup.min.js'| theme }}"></script>
+        <script src="{{'assets/js/waypoints.min.js'| theme }}"></script>
+        <!--================= Wow js =================-->
+        <script src="{{'assets/js/wow.min.js'| theme }}"></script>  
+        <!--================= Isotope pkgd min js =================-->
+        <script src="{{'assets/js/isotope.pkgd.min.js'| theme }}"></script>
+        <!--================= Imagesloaded.pkgd.min js =================-->
+        <script src="{{'assets/js/imagesloaded.pkgd.min.js'| theme }}"></script>               
+        <!--================= Back menus js =================-->
+        <script src="{{'assets/js/back-menus.js'| theme }}"></script>
+        <!--================= Plugins js =================-->
+        <script src="{{'assets/js/plugins.js'| theme }}"></script>       
+        <!--================= Main js =================-->
+        <script src="{{'assets/js/main.js'| theme }}"></script>
+
+        {% framework extras %}
+    </body>
+</html>

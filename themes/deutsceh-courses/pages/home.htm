@@ -1,4 +1,734 @@
-url = "/"
-layout = "default"
-title = "Home"
+url = "/" 
+layout = "default" 
+title = "Home" 
 ==
+{{ sliders.slider }}
+<div class="back-wrapper">
+    <div class="back-wrapper-inner language-school-page">
+        <!--================= Slider Section Start =================-->
+        
+        <div class="back-slider-part">
+            <div class="home-slider-part home2 owl-carousel owl-loaded owl-drag">
+
+
+                <div class="owl-stage-outer">
+
+                    <div class="owl-stage" style="transform: translate3d(-2564px, 0px, 0px); transition: all 0s ease 0s; width: 7692px;">
+                        {% for slide in sliders.slider %}
+                        <div class="owl-item cloned" style="width: 1282px;">
+                            <div class="single-slide">
+                                <div class="slider-img">
+                                    <img class="desktop" src="{{ slide.image }}" alt="Slider Image 1">
+                                    <img class="mobile" src="{{ slide.mobile_img }}" alt="Slider Image 1">
+                                </div>
+                                <div class="container">
+                                    <div class="slider-content">
+                                        <div class="content-part">
+                                            <span class="slider-pretitle">Welcome to Dlear</span>
+                                            <h2 class="slider-title">
+                                                {{ slide.title }}
+                                            </h2>
+                                            <p class="slider-desc">
+                                                {{ slide.subtitle }}
+                                            </p>
+                                            <div class="slider-btn">
+                                                <a href="{{ slide.btn_url}}" class="back-btn-border">{{ slide.btn_txt }}</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                        <!-- <div class="owl-item active" style="width: 1282px;">
+                            <div class="single-slide">
+                                <div class="slider-img">
+                                    <img class="desktop" src="{{'assets/images/language/1.jpg'| theme }}" alt="Slider Image 1">
+                                    <img class="mobile" src="{{'assets/images/language/11.jpg'| theme }}" alt="Slider Image 1">
+                                </div>
+                                <div class="container">
+                                    <div class="slider-content">
+                                        <div class="content-part">
+                                            <span class="slider-pretitle">Welcome to Dlear</span>
+                                            <h2 class="slider-title">
+                                                Find the right <br>Online Tutor for you.
+                                            </h2>
+                                            <p class="slider-desc">
+                                                The right mentoring relationship can be a powerful professional <br>growth. Bark up the right tree.
+                                            </p>
+                                            <div class="slider-btn">
+                                                <a href="about.html" class="back-btn-border">Visit Campus</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-item" style="width: 1282px;">
+                            <div class="single-slide">
+                                <div class="slider-img">
+                                    <img class="desktop" src="{{'assets/images/slider/2.jpg'| theme }}" alt="Slider Image 3">
+                                    <img class="mobile" src="{{'assets/images/slider/22.jpg'| theme }}" alt="Slider Image 3">
+                                </div>
+                                <div class="container">
+                                    <div class="slider-content">
+                                        <div class="content-part">
+                                            <span class="slider-pretitle">Welcome to Dlear</span>
+                                            <h2 class="slider-title">
+                                                Find the right <br>Online Tutor for you.
+                                            </h2>
+                                            <p class="slider-desc">
+                                                The right mentoring relationship can be a powerful professional <br>growth. Bark up the right tree.
+                                            </p>
+                                            <div class="slider-btn">
+                                                <a href="about.html" class="back-btn-border">Visit Campus</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-item cloned" style="width: 1282px;">
+                            <div class="single-slide">
+                                <div class="slider-img">
+                                    <img class="desktop" src="{{'assets/images/language/1.jpg'| theme }}" alt="Slider Image 1">
+                                    <img class="mobile" src="{{'assets/images/language/11.jpg'| theme }}" alt="Slider Image 1">
+                                </div>
+                                <div class="container">
+                                    <div class="slider-content">
+                                        <div class="content-part">
+                                            <span class="slider-pretitle">Welcome to Dlear</span>
+                                            <h2 class="slider-title">
+                                                Find the right <br>Online Tutor for you.
+                                            </h2>
+                                            <p class="slider-desc">
+                                                The right mentoring relationship can be a powerful professional <br>growth. Bark up the right tree.
+                                            </p>
+                                            <div class="slider-btn">
+                                                <a href="about.html" class="back-btn-border">Visit Campus</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-item cloned" style="width: 1282px;">
+                            <div class="single-slide">
+                                <div class="slider-img">
+                                    <img class="desktop" src="{{'assets/images/slider/2.jpg'| theme }}" alt="Slider Image 3">
+                                    <img class="mobile" src="{{'assets/images/slider/22.jpg'| theme }}" alt="Slider Image 3">
+                                </div>
+                                <div class="container">
+                                    <div class="slider-content">
+                                        <div class="content-part">
+                                            <span class="slider-pretitle">Welcome to Dlear</span>
+                                            <h2 class="slider-title">
+                                                Find the right <br>Online Tutor for you.
+                                            </h2>
+                                            <p class="slider-desc">
+                                                The right mentoring relationship can be a powerful professional <br>growth. Bark up the right tree.
+                                            </p>
+                                            <div class="slider-btn">
+                                                <a href="about.html" class="back-btn-border">Visit Campus</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="owl-nav"><button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button><button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button></div>
+                <div class="owl-dots"><button role="button" class="owl-dot active"><span></span></button><button role="button" class="owl-dot"><span></span></button></div>
+            </div>
+        </div>
+        <!--================= Slider Section End Here =================-->
+
+        <!--=================  About Section Start Here ================= -->
+        <div class="about__area about2__area p-relative mb-130 pt-120">
+            <div class="container about__area-width">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="about__image">
+                            <img class="back__shape__1" src="{{'assets/images/about/dots2.png'| theme }}" alt="Shape Image">
+                            <img src="{{'assets/images/about/about2.png'| theme }}" alt="About">
+                            <img class="back__shape__2" src="{{'assets/images/about/dots1.png'| theme }}" alt="Shape Image">
+                        </div>
+                    </div>
+                    <div class="col-lg-7 pl-70 sm-pl-15">
+                        <div class="about__content">
+                            <h6>Everything In Dlear</h6>
+                            <h2 class="about__title">Our Impressive Courses <br>Audio, Video, &amp; Live Classess</h2>
+                            <p class="about__paragraph">Spend some time to visit our website or head office <br>and discover our current courses.</p>
+                            <ul>
+                                <li><i class="icon_check"></i> Best teaching</li>
+                                <li><i class="icon_check"></i> Flexible</li>
+                                <li><i class="icon_check"></i> Expert tutor</li>
+                                <li><i class="icon_check"></i> Affordable</li>
+                            </ul>
+                            <div class="about__btn pt-30">
+                                <a href="languages-school.html#" class="back-btn-border"> University Overview </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--================= About Section End Here ================= -->
+
+        <!--================= Brand Section Start Here =================-->
+        <div class="brand__area back-logo-area">
+            <div class="container brand__width">
+                <div class="row">
+                    <div class="col-xxl-12">
+                        <div class="brand__content text-center">
+                            <img src="{{'assets/images/logo-carousel/icon/01.png'| theme }}" alt="">
+                            <h3 class="brand__title">Trusted by Teams at</h3>
+                            <img src="{{'assets/images/logo-carousel/icon/02.png'| theme }}" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="brand__slider">
+                    <div class="brand__item">
+                        <img src="{{'assets/images/logo-carousel/01.png'| theme }}" alt="Brand icon">
+                    </div>
+                    <div class="brand__item">
+                        <img src="{{'assets/images/logo-carousel/02.png'| theme }}" alt="Brand icon">
+                    </div>
+                    <div class="brand__item">
+                        <img src="{{'assets/images/logo-carousel/03.png'| theme }}" alt="Brand icon">
+                    </div>
+                    <div class="brand__item">
+                        <img src="{{'assets/images/logo-carousel/04.png'| theme }}" alt="Brand icon">
+                    </div>
+                    <div class="brand__item">
+                        <img src="{{'assets/images/logo-carousel/05.png'| theme }}" alt="Brand icon">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--================= Brand Section End Here =================-->
+
+        <!--================= Course Filter Section Start Here =================-->
+        <div class="back-course-filter pb-100 pt-120">
+            <div class="container">
+                <div class="row d-flex align-items-end">
+                    <div class="col-lg-5">
+                        <div class="back__title__section text-left">
+                            <h6 class="back__subtitle">Online Course</h6>
+                            <h2 class="back__tittle"> Find The Right <br> Online Course for you </h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 text-right">
+                        <div class="back-filter">
+                            <button class="active" data-filter="*">See All</button>
+                            <button data-filter=".filter1">Trending</button>
+                            <button data-filter=".filter2">Featured</button>
+                            <button data-filter=".filter3">Popularity</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row back-grid" style="position: relative; height: 608.266px;">
+                    <div class="single-studies col-lg-6 grid-item filter2 filter1" style="position: absolute; left: 0%; top: 0px;">
+                        <div class="inner-course">
+                            <div class="case-img">
+                                <img src="{{'assets/images/course-filter/1.jpg'| theme }}" alt="Course Image">
+                            </div>
+                            <div class="case-content">
+                                <ul class="meta-course">
+                                    <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>                                        500k +</li>
+                                    <li class="back-book"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-book"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>                                        Lessones</li>
+                                </ul>
+                                <h4 class="case-title"> <a href="languages-school.html#">Learning to Write as <br>a professional.</a></h4>
+                                <div class="back__user">
+                                    <img src="{{'assets/images/course/small-image/1.png'| theme }}" alt="user"> Eleanor Fant
+                                </div>
+                                <ul class="back-ratings">
+                                    <li>$34.00</li>
+                                    <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>                                        4.9</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single-studies col-lg-6 grid-item filter3 filter1" style="position: absolute; left: 50%; top: 0px;">
+                        <div class="inner-course">
+                            <div class="case-img">
+                                <img src="{{'assets/images/course-filter/2.jpg'| theme }}" alt="Course Image">
+                            </div>
+                            <div class="case-content">
+                                <ul class="meta-course">
+                                    <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>                                        500k +</li>
+                                    <li class="back-book"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-book"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>                                        Lessones</li>
+                                </ul>
+                                <h4 class="case-title"> <a href="languages-school.html#">Customer-centric Info <br> Tech Strategies.</a></h4>
+                                <div class="back__user">
+                                    <img src="{{'assets/images/course/small-image/2.png'| theme }}" alt="user"> Hans Down
+                                </div>
+                                <ul class="back-ratings">
+                                    <li>$34.00</li>
+                                    <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>                                        4.9</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single-studies col-lg-6 grid-item filter3 filter2" style="position: absolute; left: 0%; top: 304.133px;">
+                        <div class="inner-course">
+                            <div class="case-img">
+                                <img src="{{'assets/images/course-filter/3.jpg'| theme }}" alt="Course Image">
+                            </div>
+                            <div class="case-content">
+                                <ul class="meta-course">
+                                    <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>                                        500k +</li>
+                                    <li class="back-book"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-book"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>                                        Lessones</li>
+                                </ul>
+                                <h4 class="case-title"> <a href="languages-school.html#">Open Programming <br> Courses for Everyone.</a></h4>
+                                <div class="back__user">
+                                    <img src="{{'assets/images/course/small-image/2.png'| theme }}" alt="user"> Fig Nelson
+                                </div>
+                                <ul class="back-ratings">
+                                    <li>$34.00</li>
+                                    <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>                                        4.9</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single-studies col-lg-6 grid-item filter2 filter1" style="position: absolute; left: 50%; top: 304.133px;">
+                        <div class="inner-course">
+                            <div class="case-img">
+                                <img src="{{'assets/images/course-filter/4.jpg'| theme }}" alt="Course Image">
+                            </div>
+                            <div class="case-content">
+                                <ul class="meta-course">
+                                    <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>                                        500k +</li>
+                                    <li class="back-book"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-book"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>                                        Lessones</li>
+                                </ul>
+                                <h4 class="case-title"> <a href="languages-school.html#">Academic Listening and <br> Note-taking</a></h4>
+                                <div class="back__user">
+                                    <img src="{{'assets/images/course/small-image/4.png'| theme }}" alt="user"> Eric Widget
+                                </div>
+                                <ul class="back-ratings">
+                                    <li>$45.00</li>
+                                    <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>                                        4.9</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--================= Course Filter Section End Here =================-->
+
+        <!--=================  Event Section Start Here ================= -->
+        <div class="event__area p-relative pb-135 pt-120">
+            <div class="container event__width">
+                <div class="row">
+                    <div class="col-lg-8 pr-80">
+                        <div class="event__section-wrapper">
+                            <div class="event__content-wrapper mb-45">
+                                <h2 class="event__title">Join our <br> Upcoming Events</h2>
+                                <p class="event__paragraph">Learning is a life-long journey that in fact we never find the terminate stop. </p>
+                            </div>
+                            <div class="event__card-wrapper">
+                                <div class="event__card">
+                                    <div class="event__card--date-area">
+                                        <span class="event__card--date-area-1">29</span>
+                                        <span class="event__card--date-area-2">Jun, 2022</span>
+                                    </div>
+                                    <div class="event__card--icon-area">
+                                        <span class="event__card--icon-area-1"><i class="icon" data-feather="clock"></i>
+                                            11:50 am to
+                                            05:50 pm</span>
+                                        <span class="event__card--icon-area-2"><i class="icon" data-feather="map-pin"></i> New
+                                            York</span>
+                                        <p class="event__card--icon-area-3">Global Conference for reducing.</p>
+                                    </div>
+                                    <div class="event__card--btn">
+                                        <a href="about.html" class="w-btn w-btn-8">Tickets</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="event__card-wrapper">
+                                <div class="event__card">
+                                    <div class="event__card--date-area">
+                                        <span class="event__card--date-area-1">12</span>
+                                        <span class="event__card--date-area-2">Aug, 2022</span>
+                                    </div>
+                                    <div class="event__card--icon-area">
+                                        <span class="event__card--icon-area-1"><i class="icon" data-feather="clock"></i>
+                                            9:30 am to
+                                            11:30 pm</span>
+                                        <span class="event__card--icon-area-2"><i class="icon" data-feather="map-pin"></i> New
+                                            York</span>
+                                        <p class="event__card--icon-area-3">Street Performance: Call for Art.</p>
+                                    </div>
+                                    <div class="event__card--btn">
+                                        <a href="about.html" class="w-btn w-btn-8">Tickets</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="event__card-wrapper">
+                                <div class="event__card">
+                                    <div class="event__card--date-area">
+                                        <span class="event__card--date-area-1">24</span>
+                                        <span class="event__card--date-area-2">May, 2022</span>
+                                    </div>
+                                    <div class="event__card--icon-area">
+                                        <span class="event__card--icon-area-1"><i class="icon" data-feather="clock"></i>
+                                            4:50 am to
+                                            07:50 pm</span>
+                                        <span class="event__card--icon-area-2"><i class="icon" data-feather="map-pin"></i> New
+                                            York</span>
+                                        <p class="event__card--icon-area-3">Global Conference for reducing.</p>
+                                    </div>
+                                    <div class="event__card--btn">
+                                        <a href="about.html" class="w-btn w-btn-8">Tickets</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="event__small-paragraph">Lorem ipsum dolor sit amet, consectetur adall.</p>
+                            <a class="event__small-paragraph--link" href="languages-school.html#"> View all Event <i class="arrow_right event__small-paragraph--link-icon"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="event__video-btn text-end">
+                            <img class="m-img image-background" src="assets/images/event/bannner.jpg" alt="Video Image">
+                            <div class="event__video-btn--play">
+                                <a href="https://youtu.be/yJg-Y5byMMw" class="event__video-btn--play-btn popup-videos">
+                                    <i class="arrow_triangle-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--=================  Event Section End Here ================= -->
+
+        <!--================= Instructor Section Start Here =================-->
+        <div class="instructor__area pt-95 pb-95 text-center">
+            <div class="container instructor__width">
+                <div class="row">
+                    <div class="col-xxl-7 offset-xxl-2 col-xl-7 offset-xl-2 col-lg-7 offset-lg-2">
+                        <div class="instructor__title-content text-center pb-20">
+                            <span class="instructor__pre-title">Course Instructors</span>
+                            <h2 class="instructor__title">Meet our class Instructors</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                        <div class="instructor__content">
+                            <div class="instructor__content-1">
+                                <img src="assets/images/instructor/01.jpg" alt="course instructor picture">
+                            </div>
+                            <div class="instructor__content-2">
+                                <h4>
+                                    <a href="languages-school.html">Eleanor Fant</a>
+                                </h4>
+                                <p>Professor</p>
+                            </div>
+                            <div class="instructor__content-3">
+                                <ul>
+                                    <li><a href="languages-school.html#"><span aria-hidden="true" class="social_facebook"></span></a></li>
+                                    <li><a href="languages-school.html#"><span aria-hidden="true" class="social_twitter"></span></a></li>
+                                    <li><a href="languages-school.html#"><span aria-hidden="true" class="social_linkedin"></span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                        <div class="instructor__content">
+                            <div class="instructor__content-1">
+                                <img src="assets/images/instructor/02.jpg" alt="course instructor picture">
+                            </div>
+                            <div class="instructor__content-2">
+                                <h4>
+                                    <a href="languages-school.html">Indigo Violet</a>
+                                </h4>
+                                <p>Special Assistant</p>
+                            </div>
+                            <div class="instructor__content-3">
+                                <ul>
+                                    <li><a href="languages-school.html#"><span aria-hidden="true" class="social_facebook"></span></a></li>
+                                    <li><a href="languages-school.html#"><span aria-hidden="true" class="social_twitter"></span></a></li>
+                                    <li><a href="languages-school.html#"><span aria-hidden="true" class="social_linkedin"></span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                        <div class="instructor__content">
+                            <div class="instructor__content-1">
+                                <img src="assets/images/instructor/03.jpg" alt="course instructor picture">
+                            </div>
+                            <div class="instructor__content-2">
+                                <h4>
+                                    <a href="languages-school.html">Jason Response</a>
+                                </h4>
+                                <p>Education Assistant</p>
+                            </div>
+                            <div class="instructor__content-3">
+                                <ul>
+                                    <li><a href="languages-school.html#"><span aria-hidden="true" class="social_facebook"></span></a></li>
+                                    <li><a href="languages-school.html#"><span aria-hidden="true" class="social_twitter"></span></a></li>
+                                    <li><a href="languages-school.html#"><span aria-hidden="true" class="social_linkedin"></span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                        <div class="instructor__content">
+                            <div class="instructor__content-1">
+                                <img src="assets/images/instructor/04.jpg" alt="course instructor picture">
+                            </div>
+                            <div class="instructor__content-2">
+                                <h4>
+                                    <a href="languages-school.html">Jonquil Von</a>
+                                </h4>
+                                <p>Teaching Assistant</p>
+                            </div>
+                            <div class="instructor__content-3">
+                                <ul>
+                                    <li><a href="languages-school.html#"><span aria-hidden="true" class="social_facebook"></span></a></li>
+                                    <li><a href="languages-school.html#"><span aria-hidden="true" class="social_twitter"></span></a></li>
+                                    <li><a href="languages-school.html#"><span aria-hidden="true" class="social_linkedin"></span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                        <div class="instructor__content">
+                            <div class="instructor__content-1">
+                                <img src="assets/images/instructor/05.jpg" alt="course instructor picture">
+                            </div>
+                            <div class="instructor__content-2">
+                                <h4>
+                                    <a href="languages-school.html">Piff Jenkins</a>
+                                </h4>
+                                <p>Teacher</p>
+                            </div>
+                            <div class="instructor__content-3">
+                                <ul>
+                                    <li><a href="languages-school.html#"><span aria-hidden="true" class="social_facebook"></span></a></li>
+                                    <li><a href="languages-school.html#"><span aria-hidden="true" class="social_twitter"></span></a></li>
+                                    <li><a href="languages-school.html#"><span aria-hidden="true" class="social_linkedin"></span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                        <div class="instructor__content">
+                            <div class="instructor__content-1">
+                                <img src="assets/images/instructor/06.jpg" alt="course instructor picture">
+                            </div>
+                            <div class="instructor__content-2">
+                                <h4>
+                                    <a href="languages-school.html">Brian Cumin</a>
+                                </h4>
+                                <p>Lead Teacher</p>
+                            </div>
+                            <div class="instructor__content-3">
+                                <ul>
+                                    <li><a href="languages-school.html#"><span aria-hidden="true" class="social_facebook"></span></a></li>
+                                    <li><a href="languages-school.html#"><span aria-hidden="true" class="social_twitter"></span></a></li>
+                                    <li><a href="languages-school.html#"><span aria-hidden="true" class="social_linkedin"></span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                        <div class="instructor__content">
+                            <div class="instructor__content-1">
+                                <img src="assets/images/instructor/07.jpg" alt="course instructor picture">
+                            </div>
+                            <div class="instructor__content-2">
+                                <h4>
+                                    <a href="languages-school.html">Hanson Deck</a>
+                                </h4>
+                                <p>Teacher</p>
+                            </div>
+                            <div class="instructor__content-3">
+                                <ul>
+                                    <li><a href="languages-school.html#"><span aria-hidden="true" class="social_facebook"></span></a></li>
+                                    <li><a href="languages-school.html#"><span aria-hidden="true" class="social_twitter"></span></a></li>
+                                    <li><a href="languages-school.html#"><span aria-hidden="true" class="social_linkedin"></span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                        <div class="instructor__content">
+                            <div class="instructor__content-1">
+                                <img src="assets/images/instructor/08.jpg" alt="course instructor picture">
+                            </div>
+                            <div class="instructor__content-2">
+                                <h4>
+                                    <a href="languages-school.html">Alan Fresco</a>
+                                </h4>
+                                <p>Teacher</p>
+                            </div>
+                            <div class="instructor__content-3">
+                                <ul>
+                                    <li><a href="languages-school.html#"><span aria-hidden="true" class="social_facebook"></span></a></li>
+                                    <li><a href="languages-school.html#"><span aria-hidden="true" class="social_twitter"></span></a></li>
+                                    <li><a href="languages-school.html#"><span aria-hidden="true" class="social_linkedin"></span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--================= Instructor Section End Here =================-->
+
+        <!--================= Clients Section Start Here =================-->
+        <div class="back-clients pt-120 pb-120">
+            <div class="container">
+                <div class="back__title__section text-center">
+                    <h6 class="back__subtitle">Testimonials</h6>
+                    <h2 class="back__tittle"> Student Community <br>Feedback </h2>
+                </div>
+                <div class="container">
+                    <div class="client-slider owl-carousel owl-loaded owl-drag">
+
+
+
+                        <div class="owl-stage-outer">
+                            <div class="owl-stage" style="transform: translate3d(-1005px, 0px, 0px); transition: all 0s ease 0s; width: 3518px;">
+                                <div class="owl-item cloned" style="width: 472.5px; margin-right: 30px;">
+                                    <div class="single-client">
+                                        <div class="client-bottom">
+                                            <div class="testimonial__ratings">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                                <span>4.9</span>
+                                            </div>
+                                            <span class="client-author"><img src="assets/images/testemonial/02.jpg" alt="Testimonials"> </span>
+                                        </div>
+                                        <span class="client-title">Gunther Beard <em> Student </em></span>
+                                        <div class="client-content">The Class are really well structured and well explained, Icome out at the end with actual new Knowledge.!</div>
+                                    </div>
+                                </div>
+                                <div class="owl-item cloned" style="width: 472.5px; margin-right: 30px;">
+                                    <div class="single-client">
+                                        <div class="client-bottom">
+                                            <div class="testimonial__ratings">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                                <span>4.9</span>
+                                            </div>
+                                            <span class="client-author"><img src="assets/images/testemonial/01.jpg" alt="Testimonials"> </span>
+                                        </div>
+                                        <span class="client-title">Justin Case <em> Student </em></span>
+                                        <div class="client-content">The Class are really well structured and well explained, Icome out at the end with actual new Knowledge.!</div>
+                                    </div>
+                                </div>
+                                <div class="owl-item active" style="width: 472.5px; margin-right: 30px;">
+                                    <div class="single-client">
+                                        <div class="client-bottom">
+                                            <div class="testimonial__ratings">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                                <span>4.9</span>
+                                            </div>
+                                            <span class="client-author"><img src="{{'assets/images/testemonial/01.jpg'| theme }}" alt="Testimonials"> </span>
+                                        </div>
+                                        <span class="client-title">Justin Case <em> Student</em></span>
+                                        <div class="client-content">The Class are really well structured and well explained, Icome out at the end with actual new Knowledge.!</div>
+                                    </div>
+                                </div>
+                                <div class="owl-item active" style="width: 472.5px; margin-right: 30px;">
+                                    <div class="single-client">
+                                        <div class="client-bottom">
+                                            <div class="testimonial__ratings">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                                <span>4.9</span>
+                                            </div>
+                                            <span class="client-author"><img src="assets/images/testemonial/02.jpg" alt="Testimonials"> </span>
+                                        </div>
+                                        <span class="client-title">Gunther Beard <em> Student </em></span>
+                                        <div class="client-content">The Class are really well structured and well explained, Icome out at the end with actual new Knowledge.!</div>
+                                    </div>
+                                </div>
+                                <div class="owl-item" style="width: 472.5px; margin-right: 30px;">
+                                    <div class="single-client">
+                                        <div class="client-bottom">
+                                            <div class="testimonial__ratings">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                                <span>4.9</span>
+                                            </div>
+                                            <span class="client-author"><img src="assets/images/testemonial/01.jpg" alt="Testimonials"> </span>
+                                        </div>
+                                        <span class="client-title">Justin Case <em> Student </em></span>
+                                        <div class="client-content">The Class are really well structured and well explained, Icome out at the end with actual new Knowledge.!</div>
+                                    </div>
+                                </div>
+                                <div class="owl-item cloned" style="width: 472.5px; margin-right: 30px;">
+                                    <div class="single-client">
+                                        <div class="client-bottom">
+                                            <div class="testimonial__ratings">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                                <span>4.9</span>
+                                            </div>
+                                            <span class="client-author"><img src="assets/images/testemonial/01.jpg" alt="Testimonials"> </span>
+                                        </div>
+                                        <span class="client-title">Justin Case <em> Student</em></span>
+                                        <div class="client-content">The Class are really well structured and well explained, Icome out at the end with actual new Knowledge.!</div>
+                                    </div>
+                                </div>
+                                <div class="owl-item cloned" style="width: 472.5px; margin-right: 30px;">
+                                    <div class="single-client">
+                                        <div class="client-bottom">
+                                            <div class="testimonial__ratings">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                                <span>4.9</span>
+                                            </div>
+                                            <span class="client-author"><img src="assets/images/testemonial/02.jpg" alt="Testimonials"> </span>
+                                        </div>
+                                        <span class="client-title">Gunther Beard <em> Student </em></span>
+                                        <div class="client-content">The Class are really well structured and well explained, Icome out at the end with actual new Knowledge.!</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-nav"><button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button><button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button></div>
+                        <div class="owl-dots disabled"></div>
+                    </div>
+                </div>
+                <div class="text-center pt-50">
+                    <a href="languages-school.html#" class="back-btn">See all Feedback</a>
+                </div>
+            </div>
+        </div>
+        <!--================= Clients Section End Here =================-->
+
+        <!--================= Newsletter Section Start Here =================-->
+        <div class="newsletter2__area p-relative">
+            <div class="newsletter2__shape">
+                <img class="newsletter2__shape-1" src="assets/images/newsletter2/shape/01.png" alt="shape icon">
+                <img class="newsletter2__shape-2" src="assets/images/newsletter2/shape/02.png" alt=" shape icon">
+                <img class="newsletter2__shape-3" src="assets/images/newsletter2/shape/03.png" alt="shape icon">
+                <img class="newsletter2__shape-4" src="assets/images/newsletter2/shape/04.png" alt="shape icon">
+                <img class="newsletter2__shape-5" src="assets/images/newsletter2/shape/05.png" alt="shape icon">
+                <img class="newsletter2__shape-6" src="assets/images/newsletter2/shape/06.png" alt="shape icon">
+            </div>
+            <div class="container newsletter2__width">
+                <div class="row">
+                    <div class="col-xxl-12">
+                        <div class="newsletter2__wrapper pt-90 pb-130 text-center">
+                            <div class="newsletter2__content">
+                                <h2 class="newsletter2__title">Subscribe Newslatter</h2>
+                                <p class="newsletter2__paragraph">Enter your email address to register to our newsletter subscription <br> delivered on a regular basis!</p>
+                            </div>
+                            <div class="newsletter2__form">
+                                <form>
+                                    <input type="email" placeholder="Enter your mail">
+                                    <button type="submit">Subscribe</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--================= Newsletter Section End Here =================-->
+    </div>
+</div>
