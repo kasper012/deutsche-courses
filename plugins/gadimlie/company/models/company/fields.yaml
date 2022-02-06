@@ -77,12 +77,20 @@ tabs:
                         type: textarea
                         size: large
                         label: Testimonial
+                    profession:
+                        label: Profession
                     image: 
                         type: mediafinder
                         label: Image
+                        span: storm
+                        cssClass: col-md-6
                     stars: 
                         type: number
+                        label: Stars
                         step: 0.1
                         min: 0
                         max: 5
+                        span: storm
+                        cssClass: col-md-6
+                    
                     

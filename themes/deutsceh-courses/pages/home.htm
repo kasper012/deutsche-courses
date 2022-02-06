@@ -434,98 +434,23 @@ title = "Home"
 
 
                         <div class="owl-stage-outer">
-                            <div class="owl-stage" style="transform: translate3d(-1005px, 0px, 0px); transition: all 0s ease 0s; width: 3518px;">
+                            <div class="owl-stage" style="transform: translate3d(-1005px, 0px, 0px); transition: all 0s ease 0.25s; width: 3518px;">
+                                {% for testimonial in company.testimonials %}
                                 <div class="owl-item cloned" style="width: 472.5px; margin-right: 30px;">
                                     <div class="single-client">
                                         <div class="client-bottom">
                                             <div class="testimonial__ratings">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                                <span>4.9</span>
+                                                <span>{{testemonial.stars }}</span>
                                             </div>
-                                            <span class="client-author"><img src="assets/images/testemonial/02.jpg" alt="Testimonials"> </span>
+                                            <span class="client-author"><img src="{{testimonial.image| media }}" alt="Testimonials"> </span>
                                         </div>
-                                        <span class="client-title">Gunther Beard <em> Student </em></span>
-                                        <div class="client-content">The Class are really well structured and well explained, Icome out at the end with actual new Knowledge.!</div>
+                                        <span class="client-title">{{ testimonial.name }} <em> {{ testimonial.profession }}</em></span>
+                                        <div class="client-content">{{ testimonial.text }}</div>
                                     </div>
                                 </div>
-                                <div class="owl-item cloned" style="width: 472.5px; margin-right: 30px;">
-                                    <div class="single-client">
-                                        <div class="client-bottom">
-                                            <div class="testimonial__ratings">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                                <span>4.9</span>
-                                            </div>
-                                            <span class="client-author"><img src="assets/images/testemonial/01.jpg" alt="Testimonials"> </span>
-                                        </div>
-                                        <span class="client-title">Justin Case <em> Student </em></span>
-                                        <div class="client-content">The Class are really well structured and well explained, Icome out at the end with actual new Knowledge.!</div>
-                                    </div>
-                                </div>
-                                <div class="owl-item active" style="width: 472.5px; margin-right: 30px;">
-                                    <div class="single-client">
-                                        <div class="client-bottom">
-                                            <div class="testimonial__ratings">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                                <span>4.9</span>
-                                            </div>
-                                            <span class="client-author"><img src="{{'assets/images/testemonial/01.jpg'| theme }}" alt="Testimonials"> </span>
-                                        </div>
-                                        <span class="client-title">Justin Case <em> Student</em></span>
-                                        <div class="client-content">The Class are really well structured and well explained, Icome out at the end with actual new Knowledge.!</div>
-                                    </div>
-                                </div>
-                                <div class="owl-item active" style="width: 472.5px; margin-right: 30px;">
-                                    <div class="single-client">
-                                        <div class="client-bottom">
-                                            <div class="testimonial__ratings">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                                <span>4.9</span>
-                                            </div>
-                                            <span class="client-author"><img src="assets/images/testemonial/02.jpg" alt="Testimonials"> </span>
-                                        </div>
-                                        <span class="client-title">Gunther Beard <em> Student </em></span>
-                                        <div class="client-content">The Class are really well structured and well explained, Icome out at the end with actual new Knowledge.!</div>
-                                    </div>
-                                </div>
-                                <div class="owl-item" style="width: 472.5px; margin-right: 30px;">
-                                    <div class="single-client">
-                                        <div class="client-bottom">
-                                            <div class="testimonial__ratings">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                                <span>4.9</span>
-                                            </div>
-                                            <span class="client-author"><img src="assets/images/testemonial/01.jpg" alt="Testimonials"> </span>
-                                        </div>
-                                        <span class="client-title">Justin Case <em> Student </em></span>
-                                        <div class="client-content">The Class are really well structured and well explained, Icome out at the end with actual new Knowledge.!</div>
-                                    </div>
-                                </div>
-                                <div class="owl-item cloned" style="width: 472.5px; margin-right: 30px;">
-                                    <div class="single-client">
-                                        <div class="client-bottom">
-                                            <div class="testimonial__ratings">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                                <span>4.9</span>
-                                            </div>
-                                            <span class="client-author"><img src="assets/images/testemonial/01.jpg" alt="Testimonials"> </span>
-                                        </div>
-                                        <span class="client-title">Justin Case <em> Student</em></span>
-                                        <div class="client-content">The Class are really well structured and well explained, Icome out at the end with actual new Knowledge.!</div>
-                                    </div>
-                                </div>
-                                <div class="owl-item cloned" style="width: 472.5px; margin-right: 30px;">
-                                    <div class="single-client">
-                                        <div class="client-bottom">
-                                            <div class="testimonial__ratings">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                                <span>4.9</span>
-                                            </div>
-                                            <span class="client-author"><img src="assets/images/testemonial/02.jpg" alt="Testimonials"> </span>
-                                        </div>
-                                        <span class="client-title">Gunther Beard <em> Student </em></span>
-                                        <div class="client-content">The Class are really well structured and well explained, Icome out at the end with actual new Knowledge.!</div>
-                                    </div>
-                                </div>
+                                {% endfor %}
+                                
                             </div>
                         </div>
                         <div class="owl-nav"><button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button><button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button></div>
