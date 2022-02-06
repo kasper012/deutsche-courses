@@ -8,7 +8,8 @@ use Model;
 class Company extends Model
 {
     public $jsonable=[
-        'event'
+        'event',
+        'testimonials'
     ];
 
     public $implement = [

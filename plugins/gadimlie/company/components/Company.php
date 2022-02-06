@@ -33,10 +33,8 @@ class Company extends ComponentBase
         $company->phone = $settings->phone;
         $company->email = $settings->email;
         $company->event = $settings->event;
-        // $company->start_date = $settings->start_date;
-        // $company->finish_date = $settings->finish_date;
-        // $company->event_name = $settings->event_name;
-        // $company->city = $settings->city;
+        $company->testimonials = $settings->testimonials;
+
         
 
 

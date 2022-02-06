@@ -64,4 +64,25 @@ tabs:
                         label: Events name
                     city: 
                         label: City
+#Testimonials
+        testimonials:
+            tab: Testimonials
+            prompt: New testimonial
+            type: repeater
+            form: 
+                fields:
+                    name:
+                        label: Name
+                    text:
+                        type: textarea
+                        size: large
+                        label: Testimonial
+                    image: 
+                        type: mediafinder
+                        label: Image
+                    stars: 
+                        type: number
+                        step: 0.1
+                        min: 0
+                        max: 5
                     
