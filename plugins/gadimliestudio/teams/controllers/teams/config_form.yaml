@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Team
+
+# Model Form Field configuration
+form: $/gadimliestudio/teams/models/team/fields.yaml
+
+# Model Class name
+modelClass: Gadimliestudio\Teams\Models\Team
+
+# Default redirect location
+defaultRedirect: gadimliestudio/teams/teams
+
+# Create page
+create:
+    title: New team
+    redirect: gadimliestudio/teams/teams/update/:id
+    redirectClose: gadimliestudio/teams/teams
+
+# Update page
+update:
+    title: Change the team
+    redirect: gadimliestudio/teams/teams
+    redirectClose: gadimliestudio/teams/teams
+
+# Preview page
+preview:
+    title: Show
