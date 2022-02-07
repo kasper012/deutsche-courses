@@ -9,7 +9,9 @@ class Company extends Model
 {
     public $jsonable=[
         'event',
-        'testimonials'
+        'testimonials',
+        'about_icons',
+        'follow'
     ];
 
     public $implement = [

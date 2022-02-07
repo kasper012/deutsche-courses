@@ -34,6 +34,10 @@ class Company extends ComponentBase
         $company->email = $settings->email;
         $company->event = $settings->event;
         $company->testimonials = $settings->testimonials;
+        $company->about_title = $settings->about_title;
+        $company->about_subtitle= $settings->about_subtitle;
+        $company->about_icons = $settings->about_icons;
+        $company->follow = $settings->follow;
 
         
 

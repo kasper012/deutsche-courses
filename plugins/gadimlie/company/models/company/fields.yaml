@@ -92,5 +92,41 @@ tabs:
                         max: 5
                         span: storm
                         cssClass: col-md-6
-                    
-                    
+        about_title:
+            tab: About Section
+            label: About title
+            type: richeditor
+            span: storm
+            cssClass: col-md-6
+        about_subtitle:
+            tab: About Section
+            label: About subtitle
+            type: richeditor
+            span: storm
+            cssClass: col-md-6
+        image:
+            tab: About Section
+            label: About image
+            type: mediafinder
+        about_icons:
+            tab: About Section
+            label: Icons
+            type: repeater
+            prompt: New logo
+            form:
+                fields:
+                    logo_txt: 
+                        label: Logo Text
+                    logo_name:
+                        label: Logo name
+        follow:
+            tab: Follow us
+            prompt: New icon
+            type: repeater
+            form:
+                fields:
+                    name:
+                        label: Logo name
+                    url:
+                        label: Logo url
+

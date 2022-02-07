@@ -49,35 +49,7 @@ title = "Home"
         <!--================= Slider Section End Here =================-->
 
         <!--=================  About Section Start Here ================= -->
-        <div class="about__area about2__area p-relative mb-130 pt-120">
-            <div class="container about__area-width">
-                <div class="row">
-                    <div class="col-lg-5">
-                        <div class="about__image">
-                            <img class="back__shape__1" src="{{'assets/images/about/dots2.png'| theme }}" alt="Shape Image">
-                            <img src="{{'assets/images/about/about2.png'| theme }}" alt="About">
-                            <img class="back__shape__2" src="{{'assets/images/about/dots1.png'| theme }}" alt="Shape Image">
-                        </div>
-                    </div>
-                    <div class="col-lg-7 pl-70 sm-pl-15">
-                        <div class="about__content">
-                            <h6>Everything In Dlear</h6>
-                            <h2 class="about__title">Our Impressive Courses <br>Audio, Video, &amp; Live Classess</h2>
-                            <p class="about__paragraph">Spend some time to visit our website or head office <br>and discover our current courses.</p>
-                            <ul>
-                                <li><i class="icon_check"></i> Best teaching</li>
-                                <li><i class="icon_check"></i> Flexible</li>
-                                <li><i class="icon_check"></i> Expert tutor</li>
-                                <li><i class="icon_check"></i> Affordable</li>
-                            </ul>
-                            <div class="about__btn pt-30">
-                                <a href="languages-school.html#" class="back-btn-border"> University Overview </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        {% partial 'about_section'%}
 
         <!--================= About Section End Here ================= -->
 
@@ -185,42 +157,7 @@ title = "Home"
         <!--=================  Event Section End Here ================= -->
 
         <!--================= Instructor Section Start Here =================-->
-        <div class="instructor__area pt-95 pb-95 text-center">
-            <div class="container instructor__width">
-                <div class="row">
-                    <div class="col-xxl-7 offset-xxl-2 col-xl-7 offset-xl-2 col-lg-7 offset-lg-2">
-                        <div class="instructor__title-content text-center pb-20">
-                            <span class="instructor__pre-title">Course Instructors</span>
-                            <h2 class="instructor__title">Meet our class Instructors</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    {% for member in teams %}
-                    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6">
-                        <div class="instructor__content">
-                            <div class="instructor__content-1">
-                                <img src="{{ member.teacher_img| media }}" alt="course instructor picture">
-                            </div>
-                            <div class="instructor__content-2">
-                                <h4>
-                                    <a href="languages-school.html">{{ member.name }}</a>
-                                </h4>
-                                <p>{{ members.position }}</p>
-                            </div>
-                            <div class="instructor__content-3">
-                                <ul>
-                                    {% for logo in member.socials %}
-                                    <li><a href="{{ logo.url }}"><span aria-hidden="true" class="{{logo.socials_name}}"></span></a></li>
-                                    {% endfor %}
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
+        {% partial 'team'%}
         <!--================= Instructor Section End Here =================-->
 
         <!--================= Clients Section Start Here =================-->
@@ -269,7 +206,7 @@ title = "Home"
         <!--================= Newsletter Section Start Here =================-->
         <div class="newsletter2__area p-relative">
             <div class="newsletter2__shape">
-                <img class="newsletter2__shape-1" src="assets/images/newsletter2/shape/01.png" alt="shape icon">
+                <img class="newsletter2__shape-1" src="{{'assets/images/newsletter2/shape/01.png'| theme }}" alt="shape icon">
                 <img class="newsletter2__shape-2" src="assets/images/newsletter2/shape/02.png" alt=" shape icon">
                 <img class="newsletter2__shape-3" src="assets/images/newsletter2/shape/03.png" alt="shape icon">
                 <img class="newsletter2__shape-4" src="assets/images/newsletter2/shape/04.png" alt="shape icon">
@@ -285,10 +222,7 @@ title = "Home"
                                 <p class="newsletter2__paragraph">Enter your email address to register to our newsletter subscription <br> delivered on a regular basis!</p>
                             </div>
                             <div class="newsletter2__form">
-                                <form>
-                                    <input type="email" placeholder="Enter your mail">
-                                    <button type="submit">Subscribe</button>
-                                </form>
+                                {% component 'formSubscribe' %}
                             </div>
                         </div>
                     </div>
