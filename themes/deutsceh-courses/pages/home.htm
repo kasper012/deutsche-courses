@@ -204,31 +204,7 @@ title = "Home"
         <!--================= Clients Section End Here =================-->
 
         <!--================= Newsletter Section Start Here =================-->
-        <div class="newsletter2__area p-relative">
-            <div class="newsletter2__shape">
-                <img class="newsletter2__shape-1" src="{{'assets/images/newsletter2/shape/01.png'| theme }}" alt="shape icon">
-                <img class="newsletter2__shape-2" src="assets/images/newsletter2/shape/02.png" alt=" shape icon">
-                <img class="newsletter2__shape-3" src="assets/images/newsletter2/shape/03.png" alt="shape icon">
-                <img class="newsletter2__shape-4" src="assets/images/newsletter2/shape/04.png" alt="shape icon">
-                <img class="newsletter2__shape-5" src="assets/images/newsletter2/shape/05.png" alt="shape icon">
-                <img class="newsletter2__shape-6" src="assets/images/newsletter2/shape/06.png" alt="shape icon">
-            </div>
-            <div class="container newsletter2__width">
-                <div class="row">
-                    <div class="col-xxl-12">
-                        <div class="newsletter2__wrapper pt-90 pb-130 text-center">
-                            <div class="newsletter2__content">
-                                <h2 class="newsletter2__title">Subscribe Newslatter</h2>
-                                <p class="newsletter2__paragraph">Enter your email address to register to our newsletter subscription <br> delivered on a regular basis!</p>
-                            </div>
-                            <div class="newsletter2__form">
-                                {% component 'formSubscribe' %}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        {% partial 'subscribe_form'%}
         <!--================= Newsletter Section End Here =================-->
     </div>
 </div>

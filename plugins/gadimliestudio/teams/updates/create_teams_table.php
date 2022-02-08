@@ -13,9 +13,9 @@ class CreateTeamsTable extends Migration
             $table->increments('id');
 
             $table->text('name');
-            $table->text('position');
-            $table->text('socials');
-            $table->text('teacher_img');
+            $table->text('position')->nullable();
+            $table->text('socials')->nullable();
+            $table->text('teacher_img')->nullable();
 
 
 

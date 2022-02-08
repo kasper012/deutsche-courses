@@ -1,0 +1,36 @@
+title='Instructor'
+layout='default'
+url='/instructor'
+==
+
+<div class="back-wrapper">
+    <div class="back-wrapper-inner">
+        <!--================= Back Breadcrumbs Section Start Here =================-->
+        <div class="back-breadcrumbs">
+            <div class="breadcrumbs-wrap">
+                <img class="desktop" src="{{'assets/images/breadcrumbs/1.jpg'| theme }}" alt="Breadcrumbs">
+                <img class="mobile" src="{{'assets/images/breadcrumbs/1.jpg'| theme }}" alt="Breadcrumbs">
+                <div class="breadcrumbs-inner">
+                    <div class="container">
+                        <div class="breadcrumbs-text">
+                            <h1 class="breadcrumbs-title">{{this.page.title}}</h1>
+                            <div class="back-nav">
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li>Instructor</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>                
+        </div>
+        <!--================= Back Breadcrumbs Section End Here =================-->
+
+        <!--================= Instructor Section Start Here =================-->
+        {% partial 'team' %}
+        <!--================= Instructor Section End Here =================-->
+
+    </div>
+</div>
+{{ this.page.id}}

@@ -9,28 +9,54 @@
             </div>
         </div>
         <div class="row">
-            {% for member in teams %}
-            <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6">
-                <div class="instructor__content">
-                    <div class="instructor__content-1">
-                        <img src="{{ member.teacher_img| media }}" alt="course instructor picture">
-                    </div>
-                    <div class="instructor__content-2">
-                        <h4>
-                            <a href="languages-school.html">{{ member.name }}</a>
-                        </h4>
-                        <p>{{ members.position }}</p>
-                    </div>
-                    <div class="instructor__content-3">
-                        <ul>
-                            {% for logo in member.socials %}
-                            <li><a href="{{ logo.url }}"><span aria-hidden="true" class="{{logo.socials_name}}"></span></a></li>
-                            {% endfor %}
-                        </ul>
+            {% if this.page.id=='home'%}
+                {% for member in teams|slice(0, 8) %}
+
+                <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                    <div class="instructor__content">
+                        <div class="instructor__content-1">
+                            <img src="{{ member.teacher_img| media }}" alt="course instructor picture">
+                        </div>
+                        <div class="instructor__content-2">
+                            <h4>
+                                <a href="languages-school.html">{{ member.name }}</a>
+                            </h4>
+                            <p>{{ members.position }}</p>
+                        </div>
+                        <div class="instructor__content-3">
+                            <ul>
+                                {% for logo in member.socials %}
+                                <li><a href="{{ logo.url }}"><span aria-hidden="true" class="{{logo.socials_name}}"></span></a></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
                     </div>
                 </div>
+                {% endfor %}
+                {% else %}
+                {% for member in teams %}
+                <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                    <div class="instructor__content">
+                        <div class="instructor__content-1">
+                            <img src="{{ member.teacher_img| media }}" alt="course instructor picture">
+                        </div>
+                        <div class="instructor__content-2">
+                            <h4>
+                                <a href="languages-school.html">{{ member.name }}</a>
+                            </h4>
+                            <p>{{ members.position }}</p>
+                        </div>
+                        <div class="instructor__content-3">
+                            <ul>
+                                {% for logo in member.socials %}
+                                <li><a href="{{ logo.url }}"><span aria-hidden="true" class="{{logo.socials_name}}"></span></a></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                {% endif %}
             </div>
-            {% endfor %}
-        </div>
     </div>
 </div>
