@@ -51,7 +51,7 @@ class Plugin extends PluginBase
     public function registerComponents()
     {
         return [
-            //'Gadimliestudio\Forms\Components\MainContactForm' => 'mainContactForm',
+            'Gadimliestudio\Forms\Components\MainContactForm' => 'mainContactForm',
             'Gadimliestudio\Forms\Components\Subscriptionform' => 'Subscriptionform',
 
         ];

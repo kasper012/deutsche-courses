@@ -1,0 +1,89 @@
+title="Contact Us"
+url='/contact'
+layout="default"
+==
+
+<div class="back-wrapper">
+    <div class="back-wrapper-inner">
+        <!--================= Back Breadcrumbs Section Start Here =================-->
+        {% partial 'breadcrumbs'%}
+        <!--================= Back Breadcrumbs Section End Here =================-->
+
+        <div id="back-contact" class="back-contact-page pt-120 pb-120">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <!--================= Form Section Start Here =================-->
+                        <div class="back-blog-form">  
+                            <div class="back-title-sec">
+                                <h2>Let’s work <br> and create together.</h2>
+                            </div> 
+                            <div class="row pt-50"> 
+                                <div class="col-lg-3 back-address">
+                                    <strong>Call Us</strong><br>
+                                    <a href="tel:(404)888123456"> (404) 888 123 456 </a><br>
+                                    <a href="tel:(204)888234674"> (204) 888 234 674 </a><br>
+
+                                    <strong class="pt-30">Email Address</strong><br>
+                                    <a href="mailto:info@gmail.com">info@gmail.com</a>
+                                </div>
+                                <div class="col-lg-9">
+                                    <div id="blog-form" class="blog-form">
+                                        <div id="form-messages"></div>
+                                        {% component 'mainContactForm' %}
+                                    </div>
+                                </div>
+                            </div>                                      
+                        </div>
+                        <!--================= Form Section End Here =================-->
+
+                        <!--=================  Map Section Start Here =================-->
+                        <div class="back-contacts pt-106">                 
+                            <div class="back-image-maping">
+                                <img src="assets/images/contact/1.jpg" alt="Map">
+                                <div class="back-ripple back-tooltip1"><div class="box"><span>New York</span></div></div>
+                            </div>
+                        </div>                 
+                        <!--================= Map Section End Here =================-->
+
+                        <!--================= Address Section Start Here =================-->
+                        <div class="back-address-area pt-120">
+                            <div class="container">
+                                <div class="back__title__section text-center">
+                                    <h6 class="back__subtitle">Our offices</h6>
+                                    <h2 class="back__tittle"> We’re Global and Growing </h2>
+                                </div>
+                                <img class="back___shape" src="assets/images/contact/5.png" alt="shape">
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="inner-locate">                                                    
+                                            <img src="assets/images/contact/2.png" alt="icon">
+                                            <h4>United States</h4>
+                                            <p>Bastionstraße 46, 404 Düsseldorf, Germany</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="inner-locate">
+                                            <em>Main Office</em>
+                                            <img class="pt-18" src="assets/images/contact/3.png" alt="icon">
+                                            <h4>Australia</h4>
+                                            <p>Bastionstraße 46, 404 Düsseldorf, Germany</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="inner-locate">
+                                            <img src="assets/images/contact/4.png" alt="icon">
+                                            <h4>United Kingdom</h4>
+                                            <p>55/123 Norman Street, Sydney NSW 2000</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--================= Address Section End Here =================-->
+                    </div>
+                </div>        
+            </div>
+        </div>
+    </div>
+</div>
