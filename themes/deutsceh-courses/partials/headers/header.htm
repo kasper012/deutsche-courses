@@ -1,0 +1,7 @@
+{% if this.page.id=='home' %}
+    {% partial 'headers/header_home'%}
+{% elseif this.page.id=='404'%}
+    {% partial 'headers/header_404'%}
+{% else %}
+    {% partial 'headers/header_others'%}
+{% endif %}

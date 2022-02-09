@@ -10,7 +10,7 @@
                         <h5 class="footer-subtitle">{{company.slogan}}</h5>
                         <h6 class="back-follow-us">Follow us</h6>
                         <ul class="social-links">
-                            {% for logo in company.follow%}
+                            {% for logo in company.follow %}
                             <li><a href="{{logo.url}}"><span aria-hidden="true" class="{{logo.name}}"></span></a></li>
                             {% endfor %}
                         </ul>                                

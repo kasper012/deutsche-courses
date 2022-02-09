@@ -1,0 +1,138 @@
+title="Courses"
+layout='default'
+url='/courses'
+==
+
+<div class="back-wrapper">
+    <div class="back-wrapper-inner">
+        <!--================= Back Breadcrumbs Section Start Here =================-->
+        {% partial 'breadcrumbs'%}
+        <!--================= Back Breadcrumbs Section End Here =================-->
+
+        <div class="back-course-filter back__course__page_list pt-120 pb-115">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">  
+                        <div class="row align-items-center back-vertical-middle shorting__course mb-50">
+                            <div class="col-md-6">
+                                <div class="all__icons">
+                                    <div class="grid__icons">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-grid"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg> 
+                                    </div>
+                                    <div class="list__icons">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-list"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+                                    </div>
+                                    <div class="result-count">Showing 1 - 3 of 74</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 text-right">
+                                <select class="from-control">
+                                    <option>Default sorting</option>
+                                    <option>Sort by popularity</option>
+                                    <option>Sort by average rating</option>
+                                    <option>Sort by lates</option>
+                                    <option>Sort by price: low to high</option>
+                                    <option>Sort by price: high to low</option>
+                                </select>
+                            </div>
+                        </div>  
+
+                        <!--================= Course Section Start Here =================-->                                                       
+                        <div class="row">  
+                            {% partial 'courses' %}                                              
+                        </div>
+                        <!--================= Course Section End Here =================-->
+
+                        <!--================= Pagination Section Start Here =================-->
+                        <ul class="back-pagination">
+                            <li><a href="coureses-list.html#">1</a></li>
+                            <li><a href="coureses-list.html#">2</a></li>
+                            <li><a href="coureses-list.html#">3</a></li>
+                            <li class="back-next"><a href="coureses-list.html#">Next<i class="arrow_carrot-right"></i></a></li>
+                        </ul>
+                        <!--================= Pagination Section End Here =================-->
+
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="back-sidebar pl-30 md-pl-0 md-mt-60">
+                            <div class="widget back-search">
+                                <form>
+                                    <input type="text" name="input" placeholder="Search...">
+                                    <button> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg> </button>
+                                </form>
+                            </div>
+                            <div class="widget back-category">
+                                <h3 class="widget-title">Categories</h3>
+                                <ul class="recent-category">
+                                    <li> 
+                                        <input type="checkbox" id="fruit1" name="fruit-1" value="Featured">
+                                        <label for="fruit1">Featured courses <span class="category-count">(8)</span></label>
+                                    </li>
+                                    <li> 
+                                        <input type="checkbox" id="fruit2" name="fruit-2" value="Education">
+                                        <label for="fruit2">Education <span class="category-count">(5)</span></label>
+                                    </li>
+                                    <li> 
+                                        <input type="checkbox" id="fruit3" name="fruit-3" value="Business">
+                                        <label for="fruit3">Business <span class="category-count">(3)</span></label>
+                                    </li>
+                                    <li> 
+                                        <input type="checkbox" id="fruit4" name="fruit-4" value="Management">
+                                        <label for="fruit4">IT Management <span class="category-count">(7)</span></label>
+                                    </li>
+                                    <li> 
+                                        <input type="checkbox" id="fruit5" name="fruit-5" value="Development">
+                                        <label for="fruit5">Development <span class="category-count">(6)</span></label>
+                                    </li>
+                                    <li> 
+                                        <input type="checkbox" id="fruit6" name="fruit-6" value="Creative">
+                                        <label for="fruit6">Creative <span class="category-count">(2)</span></label>
+                                    </li>
+                                </ul>                                      
+                            </div> 
+                            <div class="widget back-category">
+                                <h3 class="widget-title">Price Filter</h3>
+                                <ul class="recent-category">
+                                    <li> 
+                                        <input type="checkbox" id="fruit7" name="fruit-7" value="all">
+                                        <label for="fruit7">All <span class="category-count">(209)</span></label>
+                                    </li>
+                                    <li> 
+                                        <input type="checkbox" id="fruit8" name="fruit-8" value="Free Courses">
+                                        <label for="fruit8">Free Courses <span class="category-count">(36)</span></label>
+                                    </li>
+                                    <li> 
+                                        <input type="checkbox" id="fruit9" name="fruit-9" value="Premium Courses">
+                                        <label for="fruit9">Premium Courses <span class="category-count">(185)</span></label>
+                                    </li>                                           
+                                </ul>                                      
+                            </div> 
+                            <div class="widget back-category">
+                                <h3 class="widget-title">Skill level</h3>
+                                <ul class="recent-category">
+                                    <li> 
+                                        <input type="checkbox" id="fruit10" name="fruit-10" value="All Levels">
+                                        <label for="fruit10">All Levels <span class="category-count">(50)</span></label>
+                                    </li>
+                                    <li> 
+                                        <input type="checkbox" id="fruit11" name="fruit-11" value="Beginner">
+                                        <label for="fruit11">Beginner <span class="category-count">32)</span></label>
+                                    </li>
+                                    <li> 
+                                        <input type="checkbox" id="fruit12" name="fruit-12" value="Intermediate">
+                                        <label for="fruit12">Intermediate<span class="category-count">(17)</span></label>
+                                    </li>
+                                    <li> 
+                                        <input type="checkbox" id="fruit13" name="fruit-13" value="Expert">
+                                        <label for="fruit13">Expert<span class="category-count">(2)</span></label>
+                                    </li>                                           
+                                </ul>                                      
+                            </div>                             
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,7 +1,7 @@
 
 <form class="subs-form" method="post" method="post" data-request="{{ __SELF__ }}::onSend"  data-request-validate data-request-flash>
     <input type="email" class="subscribe" name="email" placeholder="Enter your mail">
-    <button class="subs-btn" type="submit">Subscribe</button>
+    <button class="subs-btn {% if this.page.id!='home'%}footer3__form-1{% endif%}" type="submit">{% if this.page.id=='home' %}Subscribe{% else %}<i class="arrow_right"></i>{% endif %}</button>
 </form>
 
 

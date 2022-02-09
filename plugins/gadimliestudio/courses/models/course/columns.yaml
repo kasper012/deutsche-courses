@@ -9,7 +9,7 @@ columns:
         searchable: true
         span: storm
         cssClass: col-md-1
-    name:
+    teacher_name:
         label: Teacher name
         searchable: true
         span: storm

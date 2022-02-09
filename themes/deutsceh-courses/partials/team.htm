@@ -1,4 +1,4 @@
-<div class="instructor__area pt-95 pb-95 text-center">
+<div class="instructor__area {% if this.page.id == 'instructor'%}instructor__area__instructor_page pt-113 pb-98 {% else %} pt-95 pb-95 {% endif %}text-center">
     <div class="container instructor__width">
         <div class="row">
             <div class="col-xxl-7 offset-xxl-2 col-xl-7 offset-xl-2 col-lg-7 offset-lg-2">
@@ -9,7 +9,7 @@
             </div>
         </div>
         <div class="row">
-            {% if this.page.id=='home'%}
+            {% if this.page.id =='home'%}
                 {% for member in teams|slice(0, 8) %}
 
                 <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6">
