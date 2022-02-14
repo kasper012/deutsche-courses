@@ -38,6 +38,8 @@ class Company extends ComponentBase
         $company->about_subtitle= $settings->about_subtitle;
         $company->about_icons = $settings->about_icons;
         $company->follow = $settings->follow;
+        $company->main_office = $settings->main_office;
+
 
         
 

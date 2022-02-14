@@ -6,7 +6,7 @@ layout="default"
 <div class="back-wrapper">
     <div class="back-wrapper-inner">
         <!--================= Back Breadcrumbs Section Start Here =================-->
-        {% partial 'breadcrumbs'%}
+        {% partial 'breadcrumbs/breadcrumbs'%}
         <!--================= Back Breadcrumbs Section End Here =================-->
 
         <div id="back-contact" class="back-contact-page pt-120 pb-120">
@@ -40,7 +40,7 @@ layout="default"
                         <!--=================  Map Section Start Here =================-->
                         <div class="back-contacts pt-106">                 
                             <div class="back-image-maping">
-                                <img src="assets/images/contact/1.jpg" alt="Map">
+                                <img src="{{ 'assets/images/contact/1.jpg'| theme }}" alt="Map">
                                 <div class="back-ripple back-tooltip1"><div class="box"><span>New York</span></div></div>
                             </div>
                         </div>                 
@@ -53,30 +53,17 @@ layout="default"
                                     <h6 class="back__subtitle">Our offices</h6>
                                     <h2 class="back__tittle"> We’re Global and Growing </h2>
                                 </div>
-                                <img class="back___shape" src="assets/images/contact/5.png" alt="shape">
+                                <img class="back___shape" src="{{'assets/images/contact/5.png'| theme }}" alt="shape">
                                 <div class="row">
+                                    {% for country in company.main_office %}
                                     <div class="col-lg-4">
                                         <div class="inner-locate">                                                    
-                                            <img src="assets/images/contact/2.png" alt="icon">
-                                            <h4>United States</h4>
-                                            <p>Bastionstraße 46, 404 Düsseldorf, Germany</p>
+                                            <img src="{{ country.logo| media }}" alt="icon">
+                                            <h4>{{country.country}}</h4>
+                                            <p>{{country.address}}</p>
                                         </div>
                                     </div>
-                                    <div class="col-lg-4">
-                                        <div class="inner-locate">
-                                            <em>Main Office</em>
-                                            <img class="pt-18" src="assets/images/contact/3.png" alt="icon">
-                                            <h4>Australia</h4>
-                                            <p>Bastionstraße 46, 404 Düsseldorf, Germany</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <div class="inner-locate">
-                                            <img src="assets/images/contact/4.png" alt="icon">
-                                            <h4>United Kingdom</h4>
-                                            <p>55/123 Norman Street, Sydney NSW 2000</p>
-                                        </div>
-                                    </div>
+                                    {% endfor %}
                                 </div>
                             </div>
                         </div>

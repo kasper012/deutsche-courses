@@ -11,7 +11,8 @@ class Company extends Model
         'event',
         'testimonials',
         'about_icons',
-        'follow'
+        'follow',
+        'main_office'
     ];
 
     public $implement = [

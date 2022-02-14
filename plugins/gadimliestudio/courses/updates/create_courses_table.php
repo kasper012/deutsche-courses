@@ -18,8 +18,13 @@ class CreateCoursesTable extends Migration
             $table->text('students')->nullable();
             $table->text('teachers_img')->nullable();
             $table->text('courses_img')->nullable();
-            $table->text('exerpt')->nullable();
+            $table->text('title');
             $table->text('course_type')->nullable();
+            $table->text('last_update');
+            $table->text('about')->nullable();
+            $table->text('lectures')->nullable();
+            $table->text('language');
+            $table->text('duration')->nullable();
 
 
 

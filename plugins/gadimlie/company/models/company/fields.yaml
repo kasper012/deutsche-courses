@@ -129,4 +129,17 @@ tabs:
                         label: Logo name
                     url:
                         label: Logo url
+        main_office:
+            tab: Main office
+            prompt: New location
+            type: repeater
+            form:
+                fields:
+                    country: 
+                        label: Country
+                    address:
+                        label: Address
+                    logo:
+                        type: mediafinder
+                        label: logo
 

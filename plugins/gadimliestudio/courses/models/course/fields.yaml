@@ -36,12 +36,46 @@ fields:
     courses_img: 
         type: mediafinder
         label: Course image
-    exerpt:
-        type: richeditor
-        label: Courses exerpt
+        span: storm
+        cssClass: col-md-6
+    title:
+        label: Courses name
+        span: storm
+        cssClass: col-md-6
     course_type:
         label: Course type
-
+        span: storm
+        cssClass: col-md-6
+    last_update:
+        label: Last Update
+        type: datepicker
+        mode: date
+        span: storm
+        cssClass: col-md-6
+    about:
+        type: richeditor
+        label: About text
+    lectures: 
+        type: number
+        label: Number of lectures
+        step: 1
+        span: storm
+        cssClass: col-md-4
+    language:
+        type: dropdown
+        label: Language
+        default: english
+        options:
+            russian: Russian
+            english: English
+            azerbaijani: Azerbaijan
+        span: storm
+        cssClass: col-md-4
+    duration:
+        label: Duration
+        span: storm
+        cssClass: col-md-4
+    
 
 
 

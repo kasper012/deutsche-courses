@@ -14,27 +14,7 @@ public function onStart() {
     <div class="back-wrapper-inner">
 
         <!--================= Back Breadcrumbs Section Start Here =================-->
-        <div class="back-breadcrumbs back-breadcrumbs-single breadcrumbs-courses__single">
-            <div class="breadcrumbs-wrap">
-                <img class="desktop" src="assets/images/breadcrumbs/2.jpg" alt="Breadcrumbs">
-                <img class="mobile" src="assets/images/breadcrumbs/2.jpg" alt="Breadcrumbs">
-                <div class="breadcrumbs-inner">
-                    <div class="container">
-                        <div class="breadcrumbs-text text-left">
-                            <span class="single-cate">UX Design</span>
-                            <h1 class="breadcrumbs-title">Creative writing through <br>storytelling</h1>
-                            <div class="back-nav mt-30">
-                                <ul>
-                                    <li><a href="index.html">Home</a></li>
-                                    <li>Coureses</li>
-                                    <li>Creative writing through storytelling</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>                
-        </div>
+        {% partial 'breadcrumbs/breadcrumbs_courses'%}
         <!--================= Back Breadcrumbs Section End Here =================-->
 
         <!--================= Course Single Section Start Here =================-->
@@ -44,21 +24,21 @@ public function onStart() {
                     <div class="col-lg-8">
                         <ul class="user-section">
                             <li class="user">
-                                <span><img src="assets/images/course-single/user.jpg" alt="user"></span>
-                                <span>Teacher<em> Elon Gated</em></span>
+                                <span><img src="{{ course.teachers_img| media }}" alt="user"></span>
+                                <span>Teacher<em> {{ course.teacher_name }}</em></span>
                             </li>
-                            <li>Last Update: <em>July 24, 2022</em></li>
+                            <li>Last Update: <em>{{course.last_update| date('M d, Y')}}</em></li>
                             <li>Review: 
                                 <em class="back-ratings"> 
                                     <i class="icon_star"></i>
                                     <i class="icon_star"></i>
                                     <i class="icon_star"></i>
                                     <i class="icon_star"></i>
-                                    <i class="icon_star"></i> 4.5
+                                    <i class="icon_star"></i> {{ course.stars }}
                                 </em> 
                             </li>
                         </ul>
-                        <div class="image-banner"><img src="assets/images/course-single/1.jpg" alt="user"></div>
+                        <div class="image-banner"><img src="{{course.courses_img| media }}" alt="user"></div>
                         <div class="course-single-tab">
                             <ul class="nav nav-tabs" id="back-tab" role="tablist">
                                 <li class="nav-item" role="presentation">
@@ -77,7 +57,7 @@ public function onStart() {
                             <div class="tab-content" id="back-tab-content">
                                 <div class="tab-pane fade show active" id="discription" role="tabpanel" aria-labelledby="discription">
                                     <h3>About This Course</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat nis Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occae cat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde om nis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo in ve ntore veritatis et qua architecto beatae vitae dicta sunt explicabo.Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt neu e porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur ad ipisci velit, sed quia non numquame senius modi tempora incidunt ut labore et dolore magnam.</p>
+                                    <p>{{ course. about| raw }}</p>
                                     <div class="back-tag"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg> <a href="coureses-single.html#">big data,</a> <a href="coureses-single.html#">data,</a> <a href="coureses-single.html#">data analysis,</a> <a href="coureses-single.html#">data modeling</a></div>
                                     <ul class="back-objectives">
                                         <li><h3>Learning Objectives</h3></li>
@@ -337,17 +317,17 @@ public function onStart() {
                                     <option>English</option>
                                 </select>
                                 <ul class="price">
-                                    <li>$ 64 USD</li>
+                                    <li>{{ course.price }}</li>
                                     <li>$ 100 USD</li>
                                     <li>68% OFF</li>
                                 </ul>
                                 <a href="coureses-single.html#" class="cart__btn back-btn">Add to Cart</a>
                                 <ul class="price__course">
-                                    <li><i class="icon_house"></i><b>Instructor:</b> Eleanor Fant</li>
-                                    <li><i class="icon_book_alt"></i><b>Lectures:</b> 14</li>
-                                    <li><i class="icon_clock"></i><b>Duration:</b> 6 weeks</li>
-                                    <li><i class="icon_profile"></i><b>Enrolled:</b> 20 students</li>
-                                    <li><i class="icon_globe-2"></i><b>Language:</b> English</li>
+                                    <li><i class="icon_house"></i><b>Instructor:</b> {{ course.teacher_name }}</li>
+                                    <li><i class="icon_book_alt"></i><b>Lectures:</b> {{ course.lectures }}</li>
+                                    <li><i class="icon_clock"></i><b>Duration:</b> {{ course.duration }} weeks</li>
+                                    <li><i class="icon_profile"></i><b>Enrolled:</b> {{ course.students }} students</li>
+                                    <li><i class="icon_globe-2"></i><b>Language:</b> {{ course.language }}</li>
                                 </ul>
                             </div>
                             <div class="widget back-post related__courses">
