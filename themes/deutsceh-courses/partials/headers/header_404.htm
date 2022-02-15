@@ -6,7 +6,7 @@
                 <nav>
                     <!--================= Menu Toggle btn =================-->
                     <div class="menu-toggle">
-                        <div class="logo"><a href="index.html" class="logo-text"> <img src="assets/images/logo.png" alt="logo"> </a></div>
+                        <div class="logo"><a href="{{'home'| page }}" class="logo-text"> <img src="{{ company.logo }}" alt="logo"> </a></div>
                         <button type="button" id="menu-btn">
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
@@ -16,49 +16,7 @@
                     <!--================= Menu Structure =================--> 
                     <div class="back-inner-menus">
                         <ul id="backmenu" class="back-menus back-sub-shadow">
-                            <li class="mega-inner has-sub"><span class="arrow "></span> <a href="404.html#">Home</a>
-                                <ul class="mega-menu sub-menu">
-                                    <li>
-                                        <div class="mega-menu-container">
-                                            <div class="menu-item">
-                                                <div class="sub-menu-mega">
-                                                    <div class="menu-title">MultiPages</div>
-                                                    <div><a href="index.html">Univercity</a></div>
-                                                    <div><a href="index-two.html">School One</a></div>
-                                                    <div><a href="index-three.html">School Two</a></div>
-                                                    <div><a href="index-four.html">Kids</a></div>
-                                                </div>
-                                            </div>
-                                            <div class="menu-item">
-                                                <div class="sub-menu-mega">
-                                                    <div class="menu-title">MultiPages</div>
-                                                    <div><a href="{{'home'| page }}">Languages School</a></div>
-                                                    <div><a href="distant-learning.html">Distant Learning</a></div>
-                                                    <div><a href="restaurant.html">Restaurant</a></div>
-                                                    <div><a href="courses-hub.html">Courses Hub </a></div>
-                                                </div>
-                                            </div>
-                                            <div class="menu-item">
-                                                <div class="sub-menu-mega">
-                                                    <div class="menu-title">MultiPages</div>
-                                                    <div><a href="uxui-courses.html">UX/UI Courses</a></div>
-                                                    <div><a href="online-school.html">Online School</a></div>
-                                                    <div><a href="online-tutor.html">Online Tutor</a></div>
-                                                    <div><a href="freelancer-courses.html">Freelancer Courses</a></div>
-                                                </div>
-                                            </div>
-                                            <div class="menu-item">
-                                                <div class="sub-menu-mega">
-                                                    <div class="menu-title">MultiPages</div>
-                                                    <div><a href="courses-archive.html">Courses Archive</a></div>
-                                                    <div><a href="gym-coach.html">Gym Coach</a></div>
-                                                    <div><a href="one-instructor.html">One Instructor</a></div>
-                                                    <div><a href="online-training.html">Online Training</a></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
+                            <li class="mega-inner"> <a href="{{'home'| page }}">Home</a>
                             </li>
                             <li class="has-sub"><span class="arrow "></span> <a href="404.html#">Pages</a>
                                 <ul class="sub-menu" style="display: none;">
@@ -69,44 +27,9 @@
                                     <li> <a href="signup.html">Sign Up</a></li> 
                                 </ul>
                             </li>                                                                   
-                            <li class="has-sub"><span class="arrow "></span> <a href="{{ 'courses/courses'| page }}">Courses</a>
-                                <ul class="sub-menu" style="display: none;">
-                                    <li class="has-sub"><span class="arrow "></span><a href="{{ 'courses/courses'| page }}">Courses</a>
-                                        <ul class="sub-menu" style="display: none;">
-                                            <li><a href="coureses-grid.html">Classic</a></li>
-                                            <li><a href="coureses-left-sidebar.html">Left Sidebar</a></li>
-                                            <li><a href="coureses-right-sidebar.html">Right Sidebar</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="coureses-list.html">Courses List</a></li>
-                                    <li class="has-sub"><span class="arrow "></span><a href="coureses-single.html">Courses Single</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="coureses-single.html">Classic</a></li>
-                                            <li><a href="coureses-single-left.html">Left Sidebar</a></li>
-                                            <li><a href="coureses-single-right.html">Right Sidebar</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
+                            <li class=""><a href="{{ 'courses/courses'| page }}">Courses</a>
                             </li>
-                            <li class="has-sub"><span class="arrow "></span> <a href="blog.html">Blog</a>
-                                <ul class="sub-menu" style="display: none;">
-                                    <li class="has-sub"><span class="arrow "></span><a href="blog.html">Blog</a>
-                                        <ul class="sub-menu" style="display: none;">
-                                            <li><a href="blog.html">Classic</a></li>
-                                            <li><a href="blog-left-sidebar.html">Left Sidebar</a></li>
-                                            <li><a href="blog-right-sidebar.html">Right Sidebar</a></li>
-                                            <li><a href="blog-fullwidth.html">Full Width</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="has-sub"><span class="arrow "></span><a href="blog-details.html">Blog Single</a>
-                                        <ul class="sub-menu" style="display: none;">
-                                            <li><a href="blog-details.html">Classic</a></li>
-                                            <li><a href="blog-details-left.html">Left Sidebar</a></li>
-                                            <li><a href="blog-details-right.html">Right Sidebar</a></li>
-                                            <li><a href="blog-details-full.html">Full Width</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
+                            <li class=""><a href="blog.html">Blog</a>
                             </li>
                             <li class=""> <a href="contact.html">Contact</a></li>
                         </ul>                               

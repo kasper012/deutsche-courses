@@ -9,7 +9,7 @@ public function onStart() {
     $this['course'] = $course;
 }
 ==
-
+{% set NewPrice=course.price-course.price*course.discount/100 %}
 <div class="back-wrapper">
     <div class="back-wrapper-inner">
 
@@ -317,24 +317,27 @@ public function onStart() {
                                     <option>English</option>
                                 </select>
                                 <ul class="price">
-                                    <li>{{ course.price }}</li>
-                                    <li>$ 100 USD</li>
-                                    <li>68% OFF</li>
+                                    <li>${{ NewPrice }}</li>
+                                    {% if course.discount %}
+                                        <li>$ {{ course.price }}  USD</li>
+                                        <li>{{course.discount}}% OFF</li>
+                                    {% endif %}
                                 </ul>
                                 <a href="coureses-single.html#" class="cart__btn back-btn">Add to Cart</a>
                                 <ul class="price__course">
                                     <li><i class="icon_house"></i><b>Instructor:</b> {{ course.teacher_name }}</li>
                                     <li><i class="icon_book_alt"></i><b>Lectures:</b> {{ course.lectures }}</li>
-                                    <li><i class="icon_clock"></i><b>Duration:</b> {{ course.duration }} weeks</li>
+                                    <li><i class="icon_clock"></i><b>Duration:</b> {{ course.duration }} </li>
                                     <li><i class="icon_profile"></i><b>Enrolled:</b> {{ course.students }} students</li>
                                     <li><i class="icon_globe-2"></i><b>Language:</b> {{ course.language }}</li>
                                 </ul>
                             </div>
                             <div class="widget back-post related__courses">
                                 <h3 class="widget-title">Related courses</h3>
+                                {% for course in courses %}
                                 <ul class="related-courses">
                                     <li>
-                                        <a href="coureses-single.html"><span class="post-images"><img src="assets/images/related-course/1.jpg" alt="post"></span></a>
+                                        <a href="{{ 'courses/courses-detailed'| page({id:course.id})}}"><span class="post-images"><img src="{{course.courses_img| media }}" alt="post"></span></a>
                                         <div class="titles">
                                             <div class="back-ratings"> 
                                                 <i class="icon_star"></i>
@@ -343,11 +346,12 @@ public function onStart() {
                                                 <i class="icon_star"></i>
                                                 <i class="icon_star"></i>
                                             </div>
-                                            <h4><a href="coureses-single.html">Expand business…</a></h4>
-                                            <span>$54.00</span>
+                                            <h4><a href="{{ 'courses/courses-detailed'| page({id:course.id})}}">{{course.title|slice(0, 12)}}...</a></h4>
+                                            <span>{{ course.price }}$</span>
                                         </div>
                                     </li>
-                                    <li>
+                                    {% endfor %}
+                                    <!-- <li>
                                         <a href="coureses-single.html"><span class="post-images"><img src="assets/images/related-course/2.jpg" alt="post"></span></a>
                                        
                                         <div class="titles">
@@ -375,7 +379,7 @@ public function onStart() {
                                             <h4><a href="coureses-single.html">The evolution of…</a></h4>
                                             <span>Free</span>
                                         </div>                                                
-                                    </li>                                            
+                                    </li>                                             -->
                                 </ul>
                             </div>                                   
                         </div>

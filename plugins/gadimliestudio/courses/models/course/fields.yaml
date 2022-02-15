@@ -15,6 +15,8 @@ fields:
     price:
         label: Course price
         span: storm 
+        type: number
+        min: 0
         cssClass: col-md-4
     stars: 
         label: Stars
@@ -28,6 +30,8 @@ fields:
         label: Number of students
         span: storm 
         cssClass: col-md-6
+        type: number
+        min: 0
     teachers_img:
         type: mediafinder
         label: Teacher's image
@@ -52,15 +56,12 @@ fields:
         mode: date
         span: storm
         cssClass: col-md-6
-    about:
-        type: richeditor
-        label: About text
     lectures: 
         type: number
         label: Number of lectures
         step: 1
         span: storm
-        cssClass: col-md-4
+        cssClass: col-md-6
     language:
         type: dropdown
         label: Language
@@ -70,11 +71,22 @@ fields:
             english: English
             azerbaijani: Azerbaijan
         span: storm
-        cssClass: col-md-4
+        cssClass: col-md-6
     duration:
         label: Duration
         span: storm
-        cssClass: col-md-4
+        cssClass: col-md-6
+    discount:
+        label: Discount
+        type: number
+        min: 0
+        default: 1
+        span: storm
+        cssClass: col-md-6
+    about:
+        tab: About
+            type: richeditor
+            label: About
     
 
 
