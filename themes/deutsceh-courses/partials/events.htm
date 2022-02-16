@@ -1,0 +1,46 @@
+<div class="event__area p-relative pb-135 pt-120">
+    <div class="container event__width">
+        <div class="row">
+            <div class="col-lg-8 pr-80">
+                <div class="event__section-wrapper">
+                    <div class="event__content-wrapper mb-45">
+                        <h2 class="event__title">Join our <br> Upcoming Events</h2>
+                        <p class="event__paragraph">Learning is a life-long journey that in fact we never find the terminate stop. </p>
+                    </div>
+                    {% for event in company.event %}
+                    <div class="event__card-wrapper">
+                        <div class="event__card">
+                            <div class="event__card--date-area">
+                                <span class="event__card--date-area-1">{{event.start_date |date('d')}}</span>
+                                <span class="event__card--date-area-2">{{event.start_date |date('M, y')}}</span>
+                            </div>
+                            <div class="event__card--icon-area">
+                                <span class="event__card--icon-area-1"><i class="icon" data-feather="clock"></i>
+                                    {{event.start_date| date('h:m')}} to
+                                    {{event.finish_date| date('h:m')}}</span>
+                                <span class="event__card--icon-area-2"><i class="icon" data-feather="map-pin"></i> {{event.city }}</span>
+                                <p class="event__card--icon-area-3">{{event.event_name }}</p>
+                            </div>
+                            <div class="event__card--btn">
+                                <a href="about.html" class="w-btn w-btn-8">Tickets</a>
+                            </div>
+                        </div>
+                    </div>
+                        {% endfor %}
+                    <p class="event__small-paragraph">Lorem ipsum dolor sit amet, consectetur adall.</p>
+                    <a class="event__small-paragraph--link" href="languages-school.html#"> View all Event <i class="arrow_right event__small-paragraph--link-icon"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="event__video-btn text-end">
+                    <img class="m-img image-background" src="{{'assets/images/event/bannner.jpg'| theme}}" alt="Video Image">
+                    <div class="event__video-btn--play">
+                        <a href="https://youtu.be/yJg-Y5byMMw" class="event__video-btn--play-btn popup-videos">
+                            <i class="arrow_triangle-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -4083,7 +4083,7 @@ ul {
     21. Cta Section CSS Here  
 ****************************/
 .cta__area {
-  background: url(assets/images/cta/bg1.jpg) no-repeat center top;
+  background: url(../images/cta/bg1.jpg) no-repeat center top;
   width: 100%;
   background-size: cover;
 }

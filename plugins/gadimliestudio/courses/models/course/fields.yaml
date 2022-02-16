@@ -84,9 +84,8 @@ fields:
         span: storm
         cssClass: col-md-6
     about:
-        tab: About
-            type: richeditor
-            label: About
+        type: richeditor
+        label: About
     
 
 
