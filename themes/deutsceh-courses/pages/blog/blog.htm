@@ -91,14 +91,7 @@ title = "Blog"
 
                             <div class="widget">
                                 <h3 class="widget-title">Categories</h3>
-                                <ul class="recent-category">
-                                    <li> <a href="blog.html#">Business <span class="category-count">4 posts</span></a></li>
-                                    <li> <a href="blog.html#">Case study <span class="category-count">5 posts</span></a></li>
-                                    <li> <a href="blog.html#">Insights <span class="category-count">8 posts</span></a></li>
-                                    <li> <a href="blog.html#">World <span class="category-count">3 posts</span></a></li>
-                                    <li> <a href="blog.html#">Tax Solutions <span class="category-count">7 posts</span></a></li>
-                                    <li> <a href="blog.html#">Creative  <span class="category-count">6 posts</span></a></li>
-                                </ul>
+                                    {% component 'blogCategories'%}
                             </div>
 
                             <div class="widget back-recent-comments">
@@ -150,6 +143,5 @@ title = "Blog"
             </div>
         </div>
         <!--================= Blog Section End Here =================-->
-        {% component 'blogCategories'%}
     </div>
 </div>
