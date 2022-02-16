@@ -142,4 +142,33 @@ tabs:
                     logo:
                         type: mediafinder
                         label: logo
+        academic_programs:
+            tab: Academic Programs
+            prompt: New program
+            type: repeater
+            form:
+                fields:
+                    title:
+                        label: Programs title
+                    exerpt:
+                        label: Programs exerpt
+                        type: richeditor
+                    img:
+                        label: Programs image
+                        type: mediafinder
+        campus_information:
+            tab: Campus information
+            prompt: New information
+            type: repeater
+            form:
+                fields:
+                    title:
+                        label: Campus title
+                    exerpt:
+                        label: Campus exerpt
+                        type: richeditor
+                    img:
+                        label: Campus image
+                        type: mediafinder
+                    
 

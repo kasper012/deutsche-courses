@@ -22,82 +22,30 @@ layout="default"
                     </div>
                 </div>
                 <div class="row">
+                    {% for program in company.academic_programs| slice(0, 4) %}
                     <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6">
                         <div class="academic__container mb-50">
                             <div class="academic__wrapper">
                                 <div class="academic__wrapper--image m-img">
-                                    <img class="academic__wrapper--image-display" src="assets/images/academic/1.jpg" alt="Three people are standing">
+                                    <img class="academic__wrapper--image-display" src="{{program.img| media }}" alt="Three people are standing">
                                 </div>
                                 <div class="academic__wrapper--icon-1">
-                                    <img class="academic__wrapper--icon-1-middle" src="assets/images/academic/icon/1.png" alt="icon">
+                                    <img class="academic__wrapper--icon-1-middle" src="{{'assets/images/academic/icon/1.png'| theme }}" alt="icon">
                                 </div>
                             </div>
                             <div class="academic__round-area-title text-center">
-                                <h6 class="academic__round-area-title-1">Undergraduate</h6>
-                                <p class="academic__round-area-title-2">Online guitar coaching now offers<br>you an
-                                    approachable.</p>
+                                <h6 class="academic__round-area-title-1">{{ program.title }}</h6>
+                                <p class="academic__round-area-title-2">{{ program.exerpt| raw }}</p>
                                 <a class="academic__round-area-title-3" href="contact.html">Apply Now<i class="arrow_right academic__round-area-title-3--icon"></i></a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 mb-50">
-                        <div class="academic__container text-center">
-                            <div class="academic__wrapper">
-                                <div class="academic__wrapper--image m-img">
-                                    <img src="assets/images/academic/2.jpg" alt="Three people are standing">
-                                </div>
-                                <div class="academic__wrapper--icon-2">
-                                    <img class="academic__wrapper--icon-2-middle-2" src="assets/images/academic/icon/2.png" alt="icon">
-                                </div>
-                            </div>
-                            <div class="academic__round-area-title text-center">
-                                <h6 class="academic__round-area-title-1">PhD Program</h6>
-                                <p class="academic__round-area-title-2">Online guitar coaching now offers<br>you an
-                                    approachable.</p>
-                                <a class="academic__round-area-title-3" href="contact.html">Apply Now<i class="arrow_right academic__round-area-title-3--icon"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 mb-50">
-                        <div class="academic__container text-center">
-                            <div class="academic__wrapper">
-                                <div class="academic__wrapper--image m-img">
-                                    <img src="assets/images/academic/3.jpg" alt="Three people are standing">
-                                </div>
-                                <div class="academic__wrapper--icon-3">
-                                    <img class="academic__wrapper--icon-3-middle-3" src="assets/images/academic/icon/3.png" alt="icon">
-                                </div>
-                            </div>
-                            <div class="academic__round-area-title text-center">
-                                <h6 class="academic__round-area-title-1">Postgraduate</h6>
-                                <p class="academic__round-area-title-2">Online guitar coaching now offers <br> you an
-                                    approachable.</p>
-                                <a class="academic__round-area-title-3" href="contact.html">Apply Now<i class="arrow_right academic__round-area-title-3--icon"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 mb-50">
-                        <div class="academic__container text-center">
-                            <div class="academic__wrapper">
-                                <div class="academic__wrapper--image m-img">
-                                    <img src="assets/images/academic/4.jpg" alt="Three people are standing">
-                                </div>
-                                <div class="academic__wrapper--icon-4">
-                                    <img class="academic__wrapper--icon-4-middle-4" src="assets/images/academic/icon/4.png" alt="icon">
-                                </div>
-                            </div>
-                            <div class="academic__round-area-title text-center">
-                                <h6 class="academic__round-area-title-1">Continuing Education</h6>
-                                <p class="academic__round-area-title-2">Online guitar coaching now offers <br> you an
-                                    approachable.</p>
-                                <a class="academic__round-area-title-3" href="contact.html">Apply Now<i class="arrow_right academic__round-area-title-3--icon"></i></a>
-                            </div>
-                        </div>
-                    </div>
+                    {% endfor %}
+                    
                 </div>
             </div>
         </div>
-        <!--================= Academic Section Start Here =================-->
+        <!--================= Academic Section End Here =================-->
 
         <!--================= Brand Section Start Here =================-->
         {% partial 'brands' %}
@@ -126,42 +74,19 @@ layout="default"
         <div class="feature__area">
             <div class="container feature__width">
                 <div class="row">
+                    {% for info in company.campus_information| slice(0, 3)%}
                     <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
                         <div class="feature__item mb-30 transition-3 white-bg">
                             <div class="feature__icon mb-30">
-                                <img src="{{'assets/images/cta/icon/1.png'| theme }}" alt="This is the icon image">
+                                <img src="{{ info.img| media }}" alt="This is the icon image">
                             </div>
                             <div class="feature__content">
-                                <h3 class="feature__title-1"><a href="contact.html">Student Life</a></h3>
-                                <p class="feature__paragraph">The modified parameters will be pulled <br> panel
-                                    automatically.</p>
+                                <h3 class="feature__title-1"><a href="contact.html">{{ info.title }}</a></h3>
+                                <p class="feature__paragraph">{{ info.exerpt| raw }}</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                        <div class="feature__item  feature__item2  mb-30 transition-3 white-bg">
-                            <div class="feature__icon mb-30">
-                                <img src="{{'assets/images/cta/icon/2.png'| theme }}" alt="This is the icon image">
-                            </div>
-                            <div class="feature__content">
-                                <h3 class="feature__title-1"><a href="contact.html">Arts &amp; Clubs</a></h3>
-                                <p class="feature__paragraph">The modified parameters will be pulled <br> panel
-                                    automatically.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xxl-4 col-xl-4 col-lg-4">
-                        <div class="feature__item feature__item3  mb-30  transition-3 white-bg">
-                            <div class="feature__icon mb-30">
-                                <img src="{{'assets/images/cta/icon/3.png'| theme }}" alt="This is the icon image">
-                            </div>
-                            <div class="feature__content">
-                                <h3 class="feature__title-1"><a href="contact.html">Sports and Fitness</a></h3>
-                                <p class="feature__paragraph">The modified parameters will be pulled <br> panel
-                                    automatically.</p>
-                            </div>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>

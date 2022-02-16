@@ -12,7 +12,9 @@ class Company extends Model
         'testimonials',
         'about_icons',
         'follow',
-        'main_office'
+        'main_office',
+        'academic_programs',
+        'campus_information'
     ];
 
     public $implement = [

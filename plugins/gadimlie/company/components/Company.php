@@ -39,6 +39,8 @@ class Company extends ComponentBase
         $company->about_icons = $settings->about_icons;
         $company->follow = $settings->follow;
         $company->main_office = $settings->main_office;
+        $company->academic_programs = $settings->academic_programs;
+        $company->campus_information = $settings->campus_information;
 
 
         
