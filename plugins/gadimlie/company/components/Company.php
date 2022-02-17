@@ -41,6 +41,7 @@ class Company extends ComponentBase
         $company->main_office = $settings->main_office;
         $company->academic_programs = $settings->academic_programs;
         $company->campus_information = $settings->campus_information;
+        $company->partners = $settings->partners;
 
 
         

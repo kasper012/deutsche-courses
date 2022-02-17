@@ -2,7 +2,7 @@ url = "/blog"
 layout = "default"
 title = "Blog"
 ==
-
+{% component 'blogCategories' %}
 <div class="back-wrapper">
     <div class="back-wrapper-inner">
         <!--================= Back Breadcrumbs Section Start Here =================-->
@@ -36,7 +36,7 @@ title = "Blog"
                                                 </li>
                                             </ul>
 
-                                            <h3 class="blog-title"><a href="blog-details.html">{{ post.title }}</a></h3>
+                                            <h3 class="blog-title"><a href="{{post.url}}">{{ post.title }}</a></h3>
                                             <p class="blog-desc">{{ post.excerpt }}</p>
                                             <a href="blog-details.html" class="back-btn-border">Read More <i class="arrow_right"></i></a>
                                         </div>
@@ -62,32 +62,7 @@ title = "Blog"
                                     <button> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg> </button>
                                 </form>
                             </div>
-                            <div class="widget back-recent-post">
-                                <h3 class="widget-title">Recent posts</h3>
-                                <ul class="recent-posts">
-                                    <li>
-                                        <a href="blog-details.html"><span class="post-images"><img src="assets/images/related-course/1.jpg" alt="post"></span></a>
-                                        <div class="titles">                                                    
-                                            <h4><a href="blog-details.html">The next<br> generation leather </a></h4>
-                                            <span>14 January, 2022</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <a href="blog-details.html"><span class="post-images"><img src="assets/images/related-course/2.jpg" alt="post"></span></a>                                               
-                                        <div class="titles">                                                    
-                                            <h4><a href="blog-details.html">Energize trees in <br>paintings</a></h4>
-                                            <span>12 March, 2022</span>
-                                        </div>                                               
-                                    </li>
-                                    <li>
-                                        <a href="blog-details.html"><span class="post-images"><img src="assets/images/related-course/3.jpg" alt="post"></span></a>
-                                        <div class="titles">
-                                            <h4><a href="blog-details.html">Pocket Sized <br> Notebooks hold</a></h4>
-                                            <span>16 April, 2022</span>
-                                        </div>                                                
-                                    </li>                                            
-                                </ul>
-                            </div> 
+                            
 
                             <div class="widget">
                                 <h3 class="widget-title">Categories</h3>
@@ -131,25 +106,12 @@ title = "Blog"
                                 </ul>
                             </div>  
 
-                            <div class="widget widget-tags">
-                                <h3 class="widget-title">Tags</h3>
-                                <ul class="tags">
-                                    <li><a href="blog.html#">Education</a></li>
-                                    <li><a href="blog.html#">SEO Marketing</a></li>
-                                    <li><a href="blog.html#">Business</a></li>
-                                    <li><a href="blog.html#">Solutions</a></li>
-                                    <li><a href="blog.html#">UX</a></li>
-                                    <li><a href="blog.html#">Case Study</a></li>
-                                    <li><a href="blog.html#">Creative</a></li>
-                                    <li><a href="blog.html#">Insights</a></li>
-                                </ul>
-                            </div>                                 
+                                                       
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <!--================= Blog Section End Here =================-->
-        {% component 'blogCategories'%}
     </div>
 </div>

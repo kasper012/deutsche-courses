@@ -170,5 +170,15 @@ tabs:
                     img:
                         label: Campus image
                         type: mediafinder
+        partners:
+            tab: Partners
+            prompt: New partner
+            type: repeater
+            form:
+                fields:
+                    logo:
+                        type: mediafinder
+                        label: Logo
+
                     
 

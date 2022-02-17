@@ -1,0 +1,16 @@
+<div class="widget back-recent-post">
+    <h3 class="widget-title">Recent posts</h3>
+    <ul class="recent-posts">
+        {% for post in blogPosts.posts|slice(0, 3) %}
+            <li>
+                {% for image in post.featured_images| slice(0, 1)%}
+                <a href="{{post.url}}"><span class="post-images"><img src="{{ image.path }}" alt="post"></span></a>
+                {% endfor %}
+                <div class="titles">                                                    
+                    <h4><a href="{{post.url}}">{{post.title}}</a></h4>
+                    <span>{{ post.published_at('d M, Y')}}</span>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+</div> 
