@@ -2,7 +2,7 @@ url = "/blog"
 layout = "default"
 title = "Blog"
 ==
-{% component 'blogCategories' %}
+
 <div class="back-wrapper">
     <div class="back-wrapper-inner">
         <!--================= Back Breadcrumbs Section Start Here =================-->
@@ -62,18 +62,11 @@ title = "Blog"
                                     <button> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg> </button>
                                 </form>
                             </div>
-                            
+                            {% partial 'mini_blog'%}
 
                             <div class="widget">
                                 <h3 class="widget-title">Categories</h3>
-                                <ul class="recent-category">
-                                    <li> <a href="blog.html#">Business <span class="category-count">4 posts</span></a></li>
-                                    <li> <a href="blog.html#">Case study <span class="category-count">5 posts</span></a></li>
-                                    <li> <a href="blog.html#">Insights <span class="category-count">8 posts</span></a></li>
-                                    <li> <a href="blog.html#">World <span class="category-count">3 posts</span></a></li>
-                                    <li> <a href="blog.html#">Tax Solutions <span class="category-count">7 posts</span></a></li>
-                                    <li> <a href="blog.html#">Creative  <span class="category-count">6 posts</span></a></li>
-                                </ul>
+                                {% component 'blogCategories' %}
                             </div>
 
                             <div class="widget back-recent-comments">

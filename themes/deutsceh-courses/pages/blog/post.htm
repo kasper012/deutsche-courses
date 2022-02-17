@@ -26,7 +26,7 @@ function onEnd()
                     <div class="container">
                         <div class="breadcrumbs-text">
                             <span>Our Blog Details</span>
-                            <h1 class="breadcrumbs-title">{{post.title}}</h1>
+                            <div class="w-50"><h1 class="breadcrumbs-title">{{post.title}}</h1></div>
                             <div class="back-nav pt-20">
                                 <ul>
                                     <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> {{post.published_at| date('d M Y')}}</li>
@@ -355,43 +355,11 @@ function onEnd()
                                     <button> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg> </button>
                                 </form>
                             </div>
-                            <div class="widget back-recent-post">
-                                <h3 class="widget-title">Recent posts</h3>
-                                <ul class="recent-posts">
-                                    <li>
-                                        <a href="blog-details.html"><span class="post-images"><img src="assets/images/related-course/1.jpg" alt="post"></span></a>
-                                        <div class="titles">                                                    
-                                            <h4><a href="blog-details.html">The next<br> generation leather </a></h4>
-                                            <span>14 January, 2022</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <a href="blog-details.html"><span class="post-images"><img src="assets/images/related-course/2.jpg" alt="post"></span></a>                                               
-                                        <div class="titles">                                                    
-                                            <h4><a href="blog-details.html">Energize trees in <br>paintings</a></h4>
-                                            <span>12 March, 2022</span>
-                                        </div>                                               
-                                    </li>
-                                    <li>
-                                        <a href="blog-details.html"><span class="post-images"><img src="assets/images/related-course/3.jpg" alt="post"></span></a>
-                                        <div class="titles">
-                                            <h4><a href="blog-details.html">Pocket Sized <br> Notebooks hold</a></h4>
-                                            <span>16 April, 2022</span>
-                                        </div>                                                
-                                    </li>                                            
-                                </ul>
-                            </div> 
+                            {% partial 'mini_blog' %}
 
                             <div class="widget">
                                 <h3 class="widget-title">Categories</h3>
-                                <ul class="recent-category">
-                                    <li> <a href="blog-details.html#">Business <span class="category-count">4 posts</span></a></li>
-                                    <li> <a href="blog-details.html#">Case study <span class="category-count">5 posts</span></a></li>
-                                    <li> <a href="blog-details.html#">Insights <span class="category-count">8 posts</span></a></li>
-                                    <li> <a href="blog-details.html#">World <span class="category-count">3 posts</span></a></li>
-                                    <li> <a href="blog-details.html#">Tax Solutions <span class="category-count">7 posts</span></a></li>
-                                    <li> <a href="blog-details.html#">Creative  <span class="category-count">6 posts</span></a></li>
-                                </ul>
+                                {% component 'blogCategories' %}
                             </div>
 
                             <div class="widget back-recent-comments">
