@@ -5,6 +5,33 @@ title = "Blog Post"
 [blogPost]
 slug = "{{ :slug }}"
 categoryPage = "blog/category"
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog/category"
+postPage = "blog/post"
+
+[blogCategories]
+slug = "{{ :slug }}"
+displayEmpty = 0
+categoryPage = "blog/category"
+
+[ssbuttonsnb]
+fa = "maxcdn"
+twitter = 1
+facebook = 1
+google+ = 0
+stumbleupon = 0
+linkedin = 1
+custom_order = 0
+order_twitter = 2
+order_facebook = 1
+order_google+ = 4
+order_stumbleupon = 5
+order_linkedin = 3
 ==
 <?php
 function onEnd()
@@ -38,6 +65,7 @@ function onEnd()
                 </div>
             </div>                
         </div>
+        {% component 'ssbuttonsnb'%}
         <!--================= Back Breadcrumbs Section End Here =================-->
 
         <!--================= Blog Single Start Here =================-->
@@ -62,26 +90,11 @@ function onEnd()
                                             
                                         </div>
                                         <div class="col-md-6">
-                                            <ul class="social-links text-right"> 
-                                                <li class="shares">Share:</li>                                               
-                                                <li><a href="blog-details.html#"><i aria-hidden="true" class="social_facebook"></i></a></li>
-                                                <li><a href="blog-details.html#"><i aria-hidden="true" class="social_twitter"></i></a></li>
-                                                <li><a href="blog-details.html#"><i aria-hidden="true" class="social_linkedin"></i></a></li>
-                                            </ul>
+                                            {% component 'ssbuttonsnb'%}
                                         </div>
                                     </div>
                                 </div> 
 
-                                <a href="blog-details.html#" class="post-author">
-                                    <div class="avatar">
-                                        <img src="assets/images/single-blog/1.jpg" alt=""> 
-                                    </div>
-                                    <div class="info">
-                                        <h4 class="name">Sara Mening</h4>                                                
-                                        <p>Only a quid bum bag cheeky bugger geeza car boot what a load of rubbish super burke tomfoolery up the kyver plastered.</p>
-                                        <span class="designation">All stories by : Sara Mening</span>
-                                    </div>
-                                </a> 
 
                                 <div class="single-nav"> 
                                     <div class="back-prev"> <a href="blog-details.html#"><i class="back-icon arrow_right"></i> Preovious Post <em>Social media strategies</em></a> </div>

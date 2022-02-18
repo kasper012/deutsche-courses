@@ -1,6 +1,20 @@
 url = "/blog/category/:slug"
 layout = "default"
 title = "Blog category"
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "{{ :slug }}"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog/category"
+postPage = "blog/post"
+
+[blogCategories]
+slug = "{{ :slug }}"
+displayEmpty = 1
+categoryPage = "blog/category"
 ==
 <?php
 function onEnd()
@@ -10,7 +24,6 @@ function onEnd()
 }
 ?>
 ==
-
 <div class="back-wrapper">
     <div class="back-wrapper-inner">
         <!--================= Back Breadcrumbs Section Start Here =================-->
@@ -44,9 +57,9 @@ function onEnd()
                                                 </li>
                                             </ul>
 
-                                            <h3 class="blog-title"><a href="blog-details.html">{{ post.title }}</a></h3>
+                                            <h3 class="blog-title"><a href="{{post.url}}">{{ post.title }}</a></h3>
                                             <p class="blog-desc">{{ post.excerpt }}</p>
-                                            <a href="blog-details.html" class="back-btn-border">Read More <i class="arrow_right"></i></a>
+                                            <a href="{{post.url}}" class="back-btn-border">Read More <i class="arrow_right"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -73,7 +86,7 @@ function onEnd()
                             {% partial 'mini_blog' %}
                             <div class="widget">
                                 <h3 class="widget-title">Categories</h3>
-                                    
+                                    {% component 'blogCategories' %}
                             </div>
 
                             <div class="widget back-recent-comments">

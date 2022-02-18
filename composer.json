@@ -9,7 +9,8 @@
         "october/rain": "^2.0",
         "laravel/framework": "^6.0",
         "october/all": "^2.0",
-        "rainlab/blog-plugin": "^1.5"
+        "rainlab/blog-plugin": "^1.5",
+        "martin/ssbuttons-plugin": "^1.3"
     },
     "require-dev": {
         "phpunit/phpunit": "^8.0|^9.0",

@@ -1,8 +1,20 @@
 url = "/blog"
 layout = "default"
 title = "Blog"
-==
 
+[blogCategories]
+slug = "{{ :slug }}"
+displayEmpty = 1
+categoryPage = "blog/category"
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog/category"
+postPage = "blog/post"
+==
 <div class="back-wrapper">
     <div class="back-wrapper-inner">
         <!--================= Back Breadcrumbs Section Start Here =================-->
@@ -38,7 +50,7 @@ title = "Blog"
 
                                             <h3 class="blog-title"><a href="{{post.url}}">{{ post.title }}</a></h3>
                                             <p class="blog-desc">{{ post.excerpt }}</p>
-                                            <a href="blog-details.html" class="back-btn-border">Read More <i class="arrow_right"></i></a>
+                                            <a href="{{ post.url }}" class="back-btn-border">Read More <i class="arrow_right"></i></a>
                                         </div>
                                     </div>
                                 </div>
