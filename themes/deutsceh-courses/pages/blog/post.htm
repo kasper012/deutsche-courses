@@ -32,12 +32,18 @@ order_facebook = 1
 order_google+ = 4
 order_stumbleupon = 5
 order_linkedin = 3
+
+[commentsPost]
 ==
 <?php
 function onEnd()
 {
     if (isset($this->post))
         $this->page->title = $this->post->title;
+    if(!$this->post){
+        return App::make('Cms/Classes/Controller')->setStatusCode(404)->run('/404');
+    }
+
 }
 ?>
 ==
@@ -65,7 +71,7 @@ function onEnd()
                 </div>
             </div>                
         </div>
-        {% component 'ssbuttonsnb'%}
+        {% component 'commentsPost' %}
         <!--================= Back Breadcrumbs Section End Here =================-->
 
         <!--================= Blog Single Start Here =================-->
