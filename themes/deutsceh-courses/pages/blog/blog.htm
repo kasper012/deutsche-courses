@@ -1,4 +1,4 @@
-url = "/blog"
+url = "/blog/:page?"
 layout = "default"
 title = "Blog"
 
@@ -9,7 +9,7 @@ categoryPage = "blog/category"
 
 [blogPosts]
 pageNumber = "{{ :page }}"
-postsPerPage = 10
+postsPerPage = 1
 noPostsMessage = "No posts found"
 sortOrder = "published_at desc"
 categoryPage = "blog/category"
@@ -58,10 +58,12 @@ postPage = "blog/post"
                         </div> 
                         <!--================= Pagination Section End Here =================-->
                         <ul class="back-pagination">
-                            <li><a href="blog.html#">1</a></li>
-                            <li><a href="blog.html#">2</a></li>
-                            <li><a href="blog.html#">3</a></li>
-                            <li class="back-next"><a href="blog.html#">Next<i class="arrow_carrot-right"></i></a></li>
+                            {% for page in 1..3%}
+                            <li><a href="{{ 'blog/blog'| page({page:page})}}">{{page}}</a></li>
+                            {% endfor %}
+                            {% if posts.currentPage != posts.lastPage %}
+                            <li class="back-next"><a href="{{ 'blog/blog'| page({page: posts.currentPage+1})}}">Next<i class="arrow_carrot-right"></i></a></li>
+                            {% endif %}
                         </ul>
                         <!--================= Pagination Section End Here =================-->  
                     </div>
