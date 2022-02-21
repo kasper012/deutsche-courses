@@ -40,9 +40,9 @@
 
 <script>
     function formSuccess(form, context, data, textStatus, jqXHR) {
-       if(data['status'] != 200) 
-           status = 'error'; 
-           else {
+       if(data['status'] != 200){
+           status = 'error';        }
+        else {
                form.reset();
                status = 'success'; 
            }

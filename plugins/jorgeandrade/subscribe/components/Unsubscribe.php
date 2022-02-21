@@ -46,7 +46,7 @@ class Unsubscribe extends ComponentBase
         catch (\Exception $e){
 
             return \Redirect::to('/');
-
+            
         }
         
     }
@@ -57,11 +57,9 @@ class Unsubscribe extends ComponentBase
         $code = post('code');
         
         try{
-
-             $subscriber = Subs::whereCode($code)->whereEmail($email)->whereStatus(1)->firstOrFail();
-             $subscriber->status = 0;
-             $subscriber->code = null;
-             $subscriber->save();
+            
+              $subscriber = Subs::whereCode($code)->whereEmail($email)->whereStatus(1)->firstOrFail();
+              $subscriber->delete();
             \Mail::send('jorgeandrade.subscribe::mail.unsubscribe', [], function($message) use ($email) {
                 $message->to($email, 'Bye old Subscriber');
             });
