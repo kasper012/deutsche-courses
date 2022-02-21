@@ -10,21 +10,11 @@
             </div>
         </div>
         <div class="brand__slider">
+            {% for icon in company.partners %}
             <div class="brand__item">
-                <img src="{{'assets/images/logo-carousel/01.png'| theme }}" alt="Brand icon">
+                <img src="{{ icon.logo| media }}" alt="Brand icon">
             </div>
-            <div class="brand__item">
-                <img src="{{'assets/images/logo-carousel/02.png'| theme }}" alt="Brand icon">
-            </div>
-            <div class="brand__item">
-                <img src="{{'assets/images/logo-carousel/03.png'| theme }}" alt="Brand icon">
-            </div>
-            <div class="brand__item">
-                <img src="{{'assets/images/logo-carousel/04.png'| theme }}" alt="Brand icon">
-            </div>
-            <div class="brand__item">
-                <img src="{{'assets/images/logo-carousel/05.png'| theme }}" alt="Brand icon">
-            </div>
+            {% endfor %}
         </div>
     </div>
 </div>

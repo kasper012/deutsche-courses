@@ -14,7 +14,8 @@ class Company extends Model
         'follow',
         'main_office',
         'academic_programs',
-        'campus_information'
+        'campus_information',
+        'partners'
     ];
 
     public $implement = [

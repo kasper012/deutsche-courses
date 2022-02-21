@@ -22,13 +22,13 @@
 
     <div class="col-lg-6 pdl-5">
         <div class="back-input">
-            <input id="phone" type="text" name="phone" placeholder="Phone">                   
+            <input id="phone" type="tel" name="phone" placeholder="Phone">                   
         </div>
     </div>
 
     <div class="col-lg-12">
         <div class="back-textarea">
-            <textarea id="message" type="text" name="message" placeholder="Message"></textarea>
+            <textarea id="message" type="text" name="msg" placeholder="Message"></textarea>
         </div>
     </div>
 
@@ -40,9 +40,9 @@
 
 <script>
     function formSuccess(form, context, data, textStatus, jqXHR) {
-       if(data['status'] != 200) 
-           status = 'error'; 
-           else {
+       if(data['status'] != 200){
+           status = 'error';        }
+        else {
                form.reset();
                status = 'success'; 
            }

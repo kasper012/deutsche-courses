@@ -10,22 +10,16 @@
 
 [mainContactForm]
 
-[blogPosts]
-pageNumber = "{{ :page }}"
-postsPerPage = 10
-noPostsMessage = "No posts found"
-sortOrder = "published_at desc"
-categoryPage = "blog/category"
-postPage = "blog/post"
+[formSubscribe]
+urlToUnsubscribe = "unsubscribe"
+urlToProfile = "subscriber-profile"
+geo = "enabled"
+thanksMessage = "Thanks for subscribe!"
+errorMessage = "Email already exists!"
 
-[blogCategories]
-slug = "{{ :slug }}"
-displayEmpty = 0
-categoryPage = "blog/category"
-
-[blogPost]
-slug = "{{ :slug }}"
-categoryPage = "blog/category"
+[formUnsubscribe]
+thanksMessage = "Thanks for be part of us!"
+errorMessage = "You are already unsubscribe!"
 ==
 <!DOCTYPE html>
 <html lang='en'>

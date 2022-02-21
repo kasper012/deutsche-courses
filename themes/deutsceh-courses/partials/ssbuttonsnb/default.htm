@@ -1,0 +1,12 @@
+<ul class="social-links text-right"> 
+    <li class="shares">Share:</li>                                               
+    {% for button in __SELF__.property('buttons_order') %}
+        {% if(__SELF__.property(button)) %}
+            <li><a href="{{ __SELF__.property('buttons_parameters')[button]['href'] }}" title="{{ __SELF__.property('buttons_parameters')[button]['title'] }}" target="_blank" class="{{ __SELF__.property('buttons_parameters')[button]['class']['ssbuttonsnb'] }}"><i class="{{ __SELF__.property('buttons_parameters')[button]['icon'] }}"></i></a></li>
+        {% endif %}
+    {% endfor %}
+</ul>
+
+{% if __SELF__.property('js') %}
+    <script src="/plugins/martin/ssbuttons/assets/js/ssbuttons.js"></script>
+{% endif %}
