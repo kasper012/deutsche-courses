@@ -4,7 +4,7 @@
             <input type="email" name="email" placeholder="Enter your mail" required>
             <input type="hidden" name="latitude" id="latitude">
             <input type="hidden" name="longitude" id="longitude">
-            <button class="" form="form-subscribe-andradedev">Subscribe</button>
+            <button class="{% if this.page.id != 'home' %}footer3__form-1{% endif %}" form="form-subscribe-andradedev">{% if this.page.id != 'home' %}<i class="arrow_right"></i>{% else %}Subscribe{% endif %}</button>
         </form>
 
     
