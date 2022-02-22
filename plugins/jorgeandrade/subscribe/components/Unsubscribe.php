@@ -39,8 +39,8 @@ class Unsubscribe extends ComponentBase
         try{
 
             $subscriber = Subs::whereCode($code)->whereStatus(1)->firstOrFail();
-
             $this->page['code'] = $code;
+            $this->page['email'] = $subscriber->email;
 
         }
         catch (\Exception $e){
@@ -65,6 +65,7 @@ class Unsubscribe extends ComponentBase
             });
 
             $this->page['result'] = $this->property('thanksMessage');
+            
             return \Redirect::to('/');
 
         } catch (\Illuminate\Database\Eloquent\ModelNotFoundException $e){

@@ -51,10 +51,10 @@
                         <div class="footer3__form">
                             {% component 'formSubscribe' %}
                         </div>                               
-                        <h6 class="back-follow-us">Follow us</h6>
+                        <h6 class="back-follow-us text-light">Follow us</h6>
                         <ul class="social-links">
                             {% for logo in company.follow %}
-                            <li><a href="{{logo.url}}"><span aria-hidden="true" class="{{logo.name}}"></span></a></li>
+                            <li><a href="{{logo.url}}"><span aria-hidden="true" class="social_{{logo.name}}"></span></a></li>
                             {% endfor %}
                         </ul>                              
                     </div>

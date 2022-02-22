@@ -29,33 +29,33 @@ fields:
     students:
         label: Number of students
         span: storm 
-        cssClass: col-md-6
+        cssClass: col-md-4
         type: number
         min: 0
     teachers_img:
         type: mediafinder
         label: Teacher's image
         span: storm
-        cssClass: col-md-6
+        cssClass: col-md-4
     courses_img: 
         type: mediafinder
         label: Course image
         span: storm
-        cssClass: col-md-6
+        cssClass: col-md-4
     title:
         label: Courses name
         span: storm
-        cssClass: col-md-6
+        cssClass: col-md-4
     course_type:
         label: Course type
         span: storm
-        cssClass: col-md-6
+        cssClass: col-md-4
     last_update:
         label: Last Update
         type: datepicker
         mode: date
         span: storm
-        cssClass: col-md-6
+        cssClass: col-md-4
     lectures: 
         type: number
         label: Number of lectures
@@ -83,9 +83,50 @@ fields:
         default: 1
         span: storm
         cssClass: col-md-6
-    about:
-        type: richeditor
-        label: About
+    
+tabs:
+    fields:
+        about_text:
+            tab: About
+            type: richeditor
+            label: About
+        objectives:
+            tab: About
+            type: repeater
+            prompt: New objectives
+            form:
+                fields:
+                    text:
+                        label: Objectives text
+        other_teachers:
+            tab: About
+            type: repeater
+            prompt: New teacher
+            form:
+                fields:
+                    img:
+                        type: mediafinder
+                        label: Other teacher's image
+                    name: 
+                        label: Teacher's name
+                    position: 
+                        label: Teacher's position
+        follow:
+            tab: About
+            type: repeater 
+            prompt: New socials
+            form: 
+                fields:
+                    icon: 
+                        label: Icon
+                    url:
+                        label: Url
+        
+
+        
+
+
+
     
 
 

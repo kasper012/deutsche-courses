@@ -26,6 +26,10 @@ class CreateCoursesTable extends Migration
             $table->text('language');
             $table->text('duration')->nullable();
             $table->text('discount')->nullable();
+            $table->text('about_text')->nullable();
+            $table->text('objectives')->nullable();
+            $table->text('other_teachers')->nullable();
+            $table->text('follow')->nullable();
 
 
 

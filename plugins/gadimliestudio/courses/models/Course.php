@@ -34,8 +34,7 @@ class Course extends Model
     /**
      * @var array Fillable fields
      */
-    protected $fillable = [
-    ];
+    protected $fillable = [];
 
     /**
      * @var array Validation rules for attributes
@@ -51,6 +50,9 @@ class Course extends Model
      * @var array Attributes to be cast to JSON
      */
     protected $jsonable = [
+        'objectives',
+        'other_teachers',
+        'follow'
     ];
 
     /**

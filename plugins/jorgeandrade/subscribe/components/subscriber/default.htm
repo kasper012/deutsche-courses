@@ -1,12 +1,69 @@
-
-
         <form name="form-subscribe-andradedev" id="form-subscribe-andradedev" data-request="{{ __SELF__ }}::onAddSubscriber" data-request-update="'{{__SELF__}}::alert': '#result'">
             <input type="email" name="email" placeholder="Enter your mail" required>
             <input type="hidden" name="latitude" id="latitude">
             <input type="hidden" name="longitude" id="longitude">
-            <button class="{% if this.page.id != 'home' %}footer3__form-1{% endif %}" form="form-subscribe-andradedev">{% if this.page.id != 'home' %}<i class="arrow_right"></i>{% else %}Subscribe{% endif %}</button>
+            <button class="{% if this.page.id != 'home' %}footer3__form-1{% endif %}" form="form-subscribe-andradedev" onclick="myFunction()">{% if this.page.id != 'home' %}<i class="arrow_right"></i>{% else %}Subscribe{% endif %}</button>
         </form>
 
     
     <div id="result"></div>
 </div>
+
+<style>
+    #result {
+  visibility: hidden; /* Hidden by default. Visible on click */
+  min-width: 250px; /* Set a default minimum width */
+  margin-left: -125px; /* Divide value of min-width by 2 */
+  color: #fff; /* White text color */
+  text-align: center; /* Centered text */
+  border-radius: 2px; /* Rounded borders */
+  padding: 16px; /* Padding */
+  position: fixed; /* Sit on top of the screen */
+  z-index: 1; /* Add a z-index if needed */
+  left: 50%; /* Center the result */
+  bottom: 30px; /* 30px from the bottom */
+}
+
+/* Show the result when clicking on a button (class added with JavaScript) */
+#result.show {
+  visibility: visible; /* Show the result */
+  /* Add animation: Take 0.5 seconds to fade in and out the result.
+  However, delay the fade out process for 2.5 seconds */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the result in and out */
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+</style>
+
+<script>
+    function myFunction() {
+  // Get the result DIV
+  var x = document.getElementById("result");
+
+  // Add the "show" class to DIV
+  x.className = "show";
+
+  // After 3 seconds, remove the show class from DIV
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
+</script>
