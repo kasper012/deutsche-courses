@@ -57,34 +57,26 @@ public function onStart() {
                             <div class="tab-content" id="back-tab-content">
                                 <div class="tab-pane fade show active" id="discription" role="tabpanel" aria-labelledby="discription">
                                     <h3>About This Course</h3>
-                                    <p>{{ course. about| raw }}</p>
-                                    <div class="back-tag"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg> <a href="coureses-single.html#">big data,</a> <a href="coureses-single.html#">data,</a> <a href="coureses-single.html#">data analysis,</a> <a href="coureses-single.html#">data modeling</a></div>
+                                    <p>{{ course.about_text| raw }}</p>
                                     <ul class="back-objectives">
                                         <li><h3>Learning Objectives</h3></li>
-                                        <li><i class="icon_check"></i> Find a new position involving <br> Data modeling.</li>
-                                        <li><i class="icon_check"></i> Expanded responsibilities as part of <br>an existing role.</li>
-                                        <li><i class="icon_check"></i> Ready to begin working on real-world <br> data modeling projects.</li>
+                                        {% for obj in course.objectives %}
+                                            <li><i class="icon_check"></i> {{ obj.text| raw }}</li>
+                                        {% endfor %}
                                     </ul>
                                     <ul class="back-other-instructors">
                                         <li><h3>Other Instructors</h3></li>
+                                        {% for inst in course.other_teachers %}
                                         <li>
-                                            <span><img src="assets/images/course-single/user.jpg" alt="user"></span>
-                                            <span>Eleanor Fant <em>Instructor</em></span>
+                                            <span><img src="{{inst.img| media}}" alt="user"></span>
+                                            <span>{{inst.name}} <em>{{inst.position}}</em></span>
                                         </li>
-                                        <li>
-                                            <span><img src="assets/images/course-single/user2.jpg" alt="user"></span>
-                                            <span>Lauren Stamps <em>Teacher</em></span>
-                                        </li>
-                                        <li>
-                                            <span><img src="assets/images/course-single/user3.jpg" alt="user"></span>
-                                            <span>Jonquil Von <em>Associate</em></span>
-                                        </li>
+                                        {% endfor %}
+                                        
                                     </ul>
                                     <ul class="social-links">
                                         <li><h4>Follow us</h4></li>
-                                        <li><a href="coureses-single.html#"><span aria-hidden="true" class="social_facebook"></span></a></li>
-                                        <li><a href="coureses-single.html#"><span aria-hidden="true" class="social_twitter"></span></a></li>
-                                        <li><a href="coureses-single.html#"><span aria-hidden="true" class="social_linkedin"></span></a></li>
+                                        {% partial 'follow_us'%}
                                     </ul>
                                 </div>
                                 <div class="tab-pane fade" id="curriculum" role="tabpanel" aria-labelledby="curriculum">

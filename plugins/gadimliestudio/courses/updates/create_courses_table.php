@@ -29,7 +29,6 @@ class CreateCoursesTable extends Migration
             $table->text('about_text')->nullable();
             $table->text('objectives')->nullable();
             $table->text('other_teachers')->nullable();
-            $table->text('follow')->nullable();
 
 
 

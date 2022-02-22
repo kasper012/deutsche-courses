@@ -80,7 +80,6 @@ fields:
         label: Discount
         type: number
         min: 0
-        default: 1
         span: storm
         cssClass: col-md-6
     
@@ -98,6 +97,7 @@ tabs:
                 fields:
                     text:
                         label: Objectives text
+                        type: richeditor
         other_teachers:
             tab: About
             type: repeater
@@ -111,17 +111,6 @@ tabs:
                         label: Teacher's name
                     position: 
                         label: Teacher's position
-        follow:
-            tab: About
-            type: repeater 
-            prompt: New socials
-            form: 
-                fields:
-                    icon: 
-                        label: Icon
-                    url:
-                        label: Url
-        
 
         
 

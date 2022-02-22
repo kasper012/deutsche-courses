@@ -65,7 +65,6 @@ class Unsubscribe extends ComponentBase
             });
 
             $this->page['result'] = $this->property('thanksMessage');
-            
             return \Redirect::to('/');
 
         } catch (\Illuminate\Database\Eloquent\ModelNotFoundException $e){

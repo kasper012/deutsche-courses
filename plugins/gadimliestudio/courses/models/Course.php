@@ -51,8 +51,7 @@ class Course extends Model
      */
     protected $jsonable = [
         'objectives',
-        'other_teachers',
-        'follow'
+        'other_teachers'
     ];
 
     /**
