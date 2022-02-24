@@ -30,7 +30,7 @@ class CreateCoursesTable extends Migration
             $table->text('objectives')->nullable();
             $table->text('other_teachers')->nullable();
             $table->text('curriculum_text')->nullable();
-            $table->text('weeks')->nullable();
+            $table->text('weeks')->index()->nullable();
             $table->text('reviews_text')->nullable();
             $table->text('members_text')->nullable();
 

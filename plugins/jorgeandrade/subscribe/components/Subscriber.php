@@ -84,7 +84,6 @@ class Subscriber extends ComponentBase
             Mail::send('jorgeandrade.subscribe::mail.subscribe', $data, function($message) use ($data) {
                 $message->to($data['email'], 'Hi New Subscriber');
             });
-
             $this->page['result'] = $this->property('thanksMessage');
         }
         catch (\Exception $e){
