@@ -67,9 +67,9 @@ fields:
         label: Language
         default: english
         options:
-            russian: Russian
-            english: English
-            azerbaijani: Azerbaijan
+            Russian: Russian
+            English: English
+            Azerbaijani: Azerbaijan
         span: storm
         cssClass: col-md-6
     duration:
@@ -111,11 +111,60 @@ tabs:
                         label: Teacher's name
                     position: 
                         label: Teacher's position
+        curriculum_text:
+            label: Curriculums text
+            type: richeditor
+            tab: Curriculum
+        weeks:
+            prompt: New week
+            type: repeater
+            tab: Curriculum
+            form:
+                fields:
+                    weeks_id:
+                        label: ID
+                        disabled: true
+                        hidden: true
+                    weeks_title:
+                        label: Weeks title
+                    weeks_description:
+                        label: Weeks description
+                        type: richeditor
+                    lessons:
+                        prompt: New Lesson
+                        type: repeater
+                        form:
+                            fields:
+                                title:
+                                    label: Lessons title
+                                    span: storm
+                                    cssClass: col-md-4
+                                duration:
+                                    label: Duration
+                                    type: number
+                                    min: 1
+                                    span: storm
+                                    cssClass: col-md-4
+                                type:
+                                    type: dropdown
+                                    label: Type
+                                    default: Reading
+                                    options:
+                                        Audio: Audio
+                                        Video: Video
+                                        Reading: Reading
+                                    span: storm
+                                    cssClass: col-md-4
+        reviews_text:
+            label: Reviews text
+            tab: Reviews
+            type: richeditor
+        members_text:
+            label: Members text
+            tab: Members
+            type: richeditor
 
         
-
-
-
     
 
 
