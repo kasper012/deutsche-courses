@@ -21,11 +21,9 @@ layout="default"
                             <div class="row pt-50"> 
                                 <div class="col-lg-3 back-address">
                                     <strong>Call Us</strong><br>
-                                    <a href="tel:(404)888123456"> (404) 888 123 456 </a><br>
-                                    <a href="tel:(204)888234674"> (204) 888 234 674 </a><br>
-
+                                    <a href="tel:{{ company.phone }}">{{ company.phone }}</a><br>
                                     <strong class="pt-30">Email Address</strong><br>
-                                    <a href="mailto:info@gmail.com">info@gmail.com</a>
+                                    {{company.email| mailto }}
                                 </div>
                                 <div class="col-lg-9">
                                     <div id="blog-form" class="blog-form">
@@ -40,10 +38,8 @@ layout="default"
                         <!--=================  Map Section Start Here =================-->
                         <div class="back-contacts pt-106">                 
                             <div class="back-image-maping">
-                                <img src="{{ 'assets/images/contact/1.jpg'| theme }}" alt="Map">
-                                <div class="back-ripple back-tooltip1"><div class="box"><span>New York</span></div></div>
-                            </div>
-                        </div>                 
+                                {{ company.map| raw }}
+                        </div>
                         <!--================= Map Section End Here =================-->
 
                         <!--================= Address Section Start Here =================-->

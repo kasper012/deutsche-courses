@@ -1,0 +1,58 @@
+{% if canRegister %}
+    <h3>Sign Up</h3>
+
+    {{ form_ajax('onRegister') }}
+        <ul class="social-links">
+            <li><a href="signup.html#"><span aria-hidden="true" class="social_facebook"></span></a></li>
+            <li><a href="signup.html#"><span aria-hidden="true" class="social_googleplus"></span></a></li>
+        </ul>
+        <span class="back-or"> ........ Or, sign in with your email ........ </span>
+        <p>
+            <label for="registerName">Full Name</label>
+            <input
+                name="name"
+                type="text"
+                class="form-control"
+                id="registerName"
+                placeholder="Enter your full name" />
+        </p>
+
+        <p>
+            <label for="registerEmail">Email</label>
+            <input
+                name="email"
+                type="email"
+                class="form-control"
+                id="registerEmail"
+                placeholder="Enter your email" />
+        </p>
+
+        {% if loginAttribute == "username" %}
+            <p>
+                <label for="registerUsername">Username</label>
+                <input
+                    name="username"
+                    type="text"
+                    class="form-control"
+                    id="registerUsername"
+                    placeholder="Enter your username" />
+            </p>
+        {% endif %}
+
+        <p>
+            <label for="registerPassword">Password</label>
+            <input
+                name="password"
+                type="password"
+                class="form-control"
+                id="registerPassword"
+                placeholder="Choose a password" />
+        </p>
+
+        <button type="submit" class="btn btn-default">Sign up</button>
+        <em class="signup">New to Dlear? <a href="signup.html#">Sign In</a></em>
+
+    {{ form_close() }}
+{% else %}
+    <!-- Registration is disabled. -->
+{% endif %}

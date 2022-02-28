@@ -1,23 +1,23 @@
 {% for course in courses %}
-                    <div class="single-studies {% if this.page.id =='home'%} col-lg-6 {% else %} col-lg-12 {% endif %}grid-item filter2 filter1"{% if this.page.id == 'home'%} style="position: absolute; left: 0%; top: 0px;"{% endif %}>
-                        <div class="inner-course">
-                            <div class="case-img">
-                                <img src="{{course.courses_img| media }}" alt="Course Image">
-                            </div>
-                            <div class="case-content">
-                                <ul class="meta-course">
-                                    <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>                                        {{ course.students }}</li>
-                                    <li class="back-book"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-book"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>                                        {{ course.course_type }}</li>
-                                </ul>
-                                <h4 class="case-title"> <a href="{{'courses/courses-detailed'| page({id:course.id}) }}">{{course.title}}</a></h4>
-                                <div class="back__user">
-                                    <img src="{{course.teachers_img | media }}" alt="user"> {{course.teacher_name }}
-                                </div>
-                                <ul class="back-ratings">
-                                    <li>{{ course.price }}$</li>
-                                    <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>                                        {{ course.stars }}</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    {% endfor %}
+    <div class="single-studies {% if this.page.id =='home'%} col-lg-6 {% else %} col-lg-12 {% endif %}grid-item"{% if this.page.id == 'home'%} style="position: absolute; left: 0%; top: 0px;"{% endif %}>
+        <div class="inner-course">
+            <div class="case-img">
+                <img src="{{course.courses_img| media }}" alt="Course Image">
+            </div>
+            <div class="case-content">
+                <ul class="meta-course">
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>                                        {{ course.students }}</li>
+                    <li class="back-book"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-book"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>                                        {{ course.course_type }}</li>
+                </ul>
+                <h4 class="case-title"> <a href="{{'courses/courses-detailed'| page({id:course.id}) }}">{{course.title}}</a></h4>
+                <div class="back__user">
+                    <img src="{{course.teachers_img | media }}" alt="user"> {{course.teacher_name }}
+                </div>
+                <ul class="back-ratings">
+                    <li>{{ course.price }}$</li>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>                                        {{ course.stars }}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endfor %}

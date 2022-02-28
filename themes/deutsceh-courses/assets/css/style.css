@@ -6945,11 +6945,11 @@ ul {
     33. Login CSS Here 
 ****************************/
 .back-login-page {
-  background: url(assets/images/login/1.jpg) no-repeat center top;
+  background: url(../images/login/1.jpg) no-repeat center top;
   background-size: cover;
 }
 .back-login-page.back-signup-page {
-  background: url(assets/images/login/3.jpg) no-repeat center top;
+  background: url(../images/login/3.jpg) no-repeat center top;
   background-size: cover;
 }
 .back-login-page .login-left-content h1 {
@@ -7755,4 +7755,8 @@ ul {
 }
 #backscrollUp.back__up___scroll span {
   display: block;
+}
+
+.back-image-maping iframe {
+  width: 100% !important;
 }

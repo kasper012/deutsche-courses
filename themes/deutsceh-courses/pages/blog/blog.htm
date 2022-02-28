@@ -58,11 +58,13 @@ postPage = "blog/post"
                         </div> 
                         <!--================= Pagination Section End Here =================-->
                         <ul class="back-pagination">
-                            {% for page in 1..3%}
-                            <li><a href="{{ 'blog/blog'| page({page:page})}}">{{page}}</a></li>
-                            {% endfor %}
-                            {% if posts.currentPage != posts.lastPage %}
-                            <li class="back-next"><a href="{{ 'blog/blog'| page({page: posts.currentPage+1})}}">Next<i class="arrow_carrot-right"></i></a></li>
+                            {% if blogPosts.posts.length != 0 %}
+                                {% for page in 1..3 %}
+                                    <li><a href="{{ 'blog/blog'| page({page:page})}}">{{page}}</a></li>
+                                {% endfor %}
+                                {% if posts.currentPage != posts.lastPage %}
+                                    <li class="back-next"><a href="{{ 'blog/blog'| page({page: posts.currentPage+1})}}">Next<i class="arrow_carrot-right"></i></a></li>
+                                {% endif %}
                             {% endif %}
                         </ul>
                         <!--================= Pagination Section End Here =================-->  

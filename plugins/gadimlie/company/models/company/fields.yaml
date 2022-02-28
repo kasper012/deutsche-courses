@@ -40,6 +40,14 @@ tabs:
             tab: Info
             type: email
             label: Email
+            span: storm
+            cssClass: col-md-6
+        map:
+            tab: Info
+            type: richeditor
+            label: Map
+            span: storm
+            cssClass: col-md-6
 
 #Events
         event: 
