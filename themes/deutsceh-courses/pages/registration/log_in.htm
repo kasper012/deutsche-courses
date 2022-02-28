@@ -1,0 +1,32 @@
+url = "/login"
+layout = "default"
+title = "Log in"
+
+[account]
+redirect = "registration/profile"
+paramCode = "code"
+forceSecure = 0
+requirePassword = 0
+==
+<div class="back-wrapper">
+    <div class="back-wrapper-inner">
+        <div class="back-login-page pt-120 pb-120">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="login-left-content">
+                            <h1>Sign in to <br>Recharge Direct.</h1>
+                            <p>If you don't have an account you can <a href="{{'sign_up'| page}}">Register here!</a></p>
+                            <img src="{{'assets/images/login/2.png'| theme }}" alt="login">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="login-right-form">
+                            {% component 'account' %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
