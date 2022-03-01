@@ -1,6 +1,6 @@
 {% if this.page.id =='home' %}
     {% partial 'headers/header_home' %}
-{% elseif this.page.id=='404' or this.page.id == 'registration-sign_up' or this.page.id == 'registration-log_in' %}
+{% elseif this.page.id=='404' or this.page.id == 'registration-sign_up' or this.page.id == 'registration-log_in' or this.page.id == 'registration-profile'%}
     {% partial 'headers/header_404' %}
 {% else %}
     {% partial 'headers/header_others' %}

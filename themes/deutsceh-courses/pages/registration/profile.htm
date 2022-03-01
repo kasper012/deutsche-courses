@@ -4,5 +4,145 @@ title = "Profile"
 
 [session]
 security = "user"
-redirect = 404
+redirect = "/404"
 ==
+
+<div class="back-wrapper">
+    <div class="back-wrapper-inner">
+        <div class="profile-top back__course__area pt-120 pb-90 md-pt-80 md-pb-50">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <img src="{{'assets/images/profile/1.png'| theme }}" alt="profile">
+                    </div>
+                    <div class="col-lg-8 pl-50 md-pl-15 md-mt-60">
+                        <ul class="user-section">
+                            <li class="user">
+                                <span class="name">{{user.name}}</span><em>Teaches Interior Markater</em>
+                            </li>
+                            <li>Review: 
+                                <em class="back-ratings"> 
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i> 4.5
+                                </em> 
+                            </li>
+                            <li class="social">
+                                Follow Us: <em>
+                                    <a href="profile.html#"><span aria-hidden="true" class="social_facebook"></span></a>
+                                    <a href="profile.html#"><span aria-hidden="true" class="social_twitter"></span></a>
+                                    <a href="profile.html#"><span aria-hidden="true" class="social_linkedin"></span></a>
+                                </em>
+                            </li>
+                            <li><a href="profile.html#" class="follow">Follow <i class="icon_plus"></i></a></li>
+                        </ul>
+                        <h3>Short Bio</h3>
+                        <p>Only a quid me old mucker squiffy tomfoolery grub cheers ruddy cor blimey guvnor in my flat, up the duff Eaton car boot up the kyver pardon you A bit of how's your father David skive off sloshed, don't get shirty with me chip shop vagabond crikey bugger Queen's English chap. Matie boy nancy boy bite your arm off up the kyver old no biggie fantastic boot, David have it show off show off pick your nose and blow off lost the plot porkies bits and bobs only a quid bugger all mate.</p>
+
+                        <h2 class="teacher__course">Teacher Courses</h2>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="course__item mb-30">
+                                    <div class="course__thumb">
+                                        <a href="coureses-single.html"><img src="assets/images/course/1.jpg" alt="image"></a>
+                                    </div>
+                                    <div class="course__inner">
+                                        <span class="back-category cate-1">UX Design</span>
+                                        <h3 class="back-course-title"><a href="coureses-single.html">Become a product <br> Manager learn the skills &amp; job.</a></h3>
+                                        <div class="course__card-icon d-flex align-items-center">
+                                            <div class="course__card-icon--1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                                                <span>500k+</span>
+                                            </div>
+                                            <div class="course__card-icon--2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                                <span>4.9</span>
+                                            </div>
+                                            <div class="back__user">
+                                                $76.00 <img src="assets/images/course/small-image/1.png" alt="user">
+                                            </div>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="course__item mb-30">
+                                    <div class="course__thumb">
+                                        <a href="coureses-single.html"><img src="assets/images/course/2.jpg" alt="image"></a>
+                                    </div>
+                                    <div class="course__inner">
+                                        <span class="back-category cate-2">Development</span>
+                                        <h3 class="back-course-title"><a href="coureses-single.html">Open Programming <br>Courses for Everyone Python.</a></h3>
+                                        <div class="course__card-icon d-flex align-items-center">
+                                            <div class="course__card-icon--1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                                                <span>500k+</span>
+                                            </div>
+                                            <div class="course__card-icon--2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                                <span>4.9</span>
+                                            </div>
+                                            <div class="back__user">
+                                                $57.00 <img src="assets/images/course/small-image/2.png" alt="user">
+                                            </div>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="course__item mb-30">
+                                    <div class="course__thumb">
+                                        <a href="coureses-single.html"><img src="assets/images/course/3.jpg" alt="image"></a>
+                                    </div>
+                                    <div class="course__inner">
+                                        <span class="back-category cate-3">Audio &amp; Music</span>
+                                        <h3 class="back-course-title"><a href="coureses-single.html">Learning to write as a <br>Professional.</a></h3>
+                                        <div class="course__card-icon d-flex align-items-center">
+                                            <div class="course__card-icon--1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                                                <span>500k+</span>
+                                            </div>
+                                            <div class="course__card-icon--2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                                <span>4.9</span>
+                                            </div>
+                                            <div class="back__user">
+                                                Free <img src="assets/images/course/small-image/3.png" alt="user">
+                                            </div>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="course__item mb-30">
+                                    <div class="course__thumb">
+                                        <a href="coureses-single.html"><img src="assets/images/course/4.jpg" alt="image"></a>
+                                    </div>
+                                    <div class="course__inner">
+                                        <span class="back-category cate-4">Marketing</span>
+                                        <h3 class="back-course-title"><a href="coureses-single.html">Academic Listening and <br> Note taking.</a></h3>
+                                        <div class="course__card-icon d-flex align-items-center">
+                                            <div class="course__card-icon--1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                                                <span>500k+</span>
+                                            </div>
+                                            <div class="course__card-icon--2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                                <span>4.9</span>
+                                            </div>
+                                            <div class="back__user">
+                                                $42.00 <img src="assets/images/course/small-image/4.png" alt="user">
+                                            </div>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                            </div>                                   
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

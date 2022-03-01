@@ -132,7 +132,7 @@ class Session extends ComponentBase
      * Log out the user
      *
      * Usage:
-     *   <a data-request="onLogout">Sign out</a>
+     *   <a data-request="">SignonLogout out</a>
      *
      * With the optional redirect parameter:
      *   <a data-request="onLogout" data-request-data="redirect: '/good-bye'">Sign out</a>
