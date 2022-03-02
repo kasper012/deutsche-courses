@@ -7,7 +7,7 @@ use Model;
  */
 class Company extends Model
 {
-    public $jsonable=[
+    public $jsonable = [
         'event',
         'testimonials',
         'about_icons',

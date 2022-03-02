@@ -1,6 +1,11 @@
 title=""
-url="courses/:id"
+url="/courses/:id"
 layout="default"
+
+[commentsPost]
+
+[session]
+security = "all"
 ==
 use Gadimliestudio\Courses\Models\Course;
 public function onStart() {
@@ -11,6 +16,7 @@ public function onStart() {
         $this['course'] = $course;
     }catch(Exception $e){}
 }
+
 ==
 {% if course.discount != 0%}
     {% set NewPrice=course.price-course.price*course.discount/100 %}
@@ -329,3 +335,4 @@ public function onStart() {
 
     </div>
 </div>
+{% component 'commentsPost'%}

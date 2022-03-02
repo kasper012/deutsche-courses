@@ -41,7 +41,11 @@ class Company extends ComponentBase
         $company->follow = $settings->follow;
         $company->main_office = $settings->main_office;
         $company->academic_programs = $settings->academic_programs;
-        $company->campus_information = $settings->campus_information;
+
+        
+        // $company->campus_information = array_slice($settings->campus_information, 0, 3);
+        $company->campus_information = $settings->campus_information;   
+
         $company->partners = $settings->partners;
 
 
